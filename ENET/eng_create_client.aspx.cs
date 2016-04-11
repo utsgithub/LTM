@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ENET
 {
-    public partial class acc_dashboard : System.Web.UI.Page
+    public partial class end_create_client : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
