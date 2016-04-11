@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +14,23 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DisplayAllUsersSqlConnection();
+        }
 
+        private void DisplayAllUsersSqlConnection()
+        {
+            var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
+            var conn = new SqlConnection(connString);
+            var selectCommand = new SqlCommand("SELECT * FROM query_user", conn);
+            var adapter = new SqlDataAdapter(selectCommand);
+
+            var resultSet = new DataSet();
+            adapter.Fill(resultSet);
+
+            ListAllUsersGridView.DataSource = resultSet;
+            ListAllUsersGridView.DataBind();
+
+            conn.Close();
         }
     }
 }

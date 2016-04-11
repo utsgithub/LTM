@@ -1,31 +1,13 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="acc_list_users.aspx.cs" Inherits="IMS.About" %>
+﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="acc_list_users.aspx.cs" Inherits="IMS.acc_list_users" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>User List</h1>
-    <table width="100%" class="table table-bordered table-hover table-striped">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>User Type</th>
-            <th>District </th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td><a runat="server" href="~/acc_edit_district">Tim</a></td>
-            <td>Site Engineer</td>
-            <td>Urban Indonesia</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><a runat="server" href="~/acc_edit_district">John</a></td>
-            <td>Site Engineer</td>
-            <td>Rural Indonesia</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><a runat="server" href="~/acc_edit_district">Peter</a></td>
-            <td>Manager</td>
-            <td>Urban Papua New Guinea</td>
-        </tr>
-    </table>
+    <asp:GridView ID="ListAllUsersGridView" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">
+        <Columns>
+            <asp:BoundField DataField="users_ID" HeaderText="ID" />
+            <asp:HyperLinkField DataTextField="userName" HeaderText="Name" DataNavigateUrlFields="users_ID" DataNavigateUrlFormatString="~\acc_edit_district.aspx?ID={0}" />
+            <asp:BoundField DataField="userType" HeaderText="User Type" />
+            <asp:BoundField DataField="Districts" HeaderText="District" />
+        </Columns>
+    </asp:GridView>
 </asp:Content>

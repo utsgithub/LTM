@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +15,64 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["ID"] != null)
+            {
+                int id = int.Parse(Request.QueryString["ID"]);
+
+                DisplayClientSqlConnection(id);
+                DisplayClientInterventionsSqlConnection(id, 1);
+            }
+        }
+
+        private void DisplayClientSqlConnection(int id)
+        {
+            var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
+            var conn = new SqlConnection(connString);
+            var cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            //cmd.CommandText = String.Format("SELECT c.ID, c.name, c.descriptive, d.Districts FROM clients C INNER JOIN districts d on C.district_id = d.ID WHERE c.ID = {0} ", id);
+            cmd.CommandText = String.Format("SELECT * FROM eng_list_client WHERE clients_ID = {0} ", id);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+            conn.Open();
+
+            reader = cmd.ExecuteReader();
+
+            if(reader.HasRows)
+            {
+                while(reader.Read())
+                {
+                    NameLabel.Text = reader.GetString(1);
+                    DescriptiveLabel.Text = reader.GetString(2);
+                    DistrictLabel.Text = reader.GetString(5);
+                }
+            }
+
+            reader.Close();
+            conn.Close();
+        }
+        
+        private void DisplayClientInterventionsSqlConnection(int id, int user_id)
+        {
+            // For the time being User ID 1 will handle the user, this will need to updated to reflect the logged in user's id
+            // ALSO Need a Primary Key for Intervention Table also need to pass this ID over to the detailed intervention page
+
+            var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
+            var conn = new SqlConnection(connString);
+            //var selectCommand = new SqlCommand("SELECT c.ID, c.name, c.descriptive, d.Districts FROM clients C INNER JOIN districts d on C.district_id = d.ID", conn);
+            string query = String.Format("SELECT * FROM eng_detail_intervention WHERE clients_id = {0} AND user_id = {1} ", id, user_id);
+            var selectCommand = new SqlCommand(query, conn);
+            var adapter = new SqlDataAdapter(selectCommand);
+
+            var resultSet = new DataSet();
+            adapter.Fill(resultSet);
+
+            ListAllClientInterventionsGridView.DataSource = resultSet;
+            ListAllClientInterventionsGridView.DataBind();
+
+            conn.Close();
 
         }
     }
