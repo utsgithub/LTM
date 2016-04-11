@@ -19,29 +19,6 @@
     </table>
     <h1>Interventions List</h1>
     <a href="eng_create_intervention" class="btn btn-primary" style="margin: 20px 0px;">Create Intervention</a>
-    <!--DEMO CLIENT INTERVENTION DETAIL
-    <table width="100%" class="table table-bordered table-hover table-striped">
-        <tr>
-            <th>intervention type</th>
-            <th>Status</th>
-            <th>date </th>
-        </tr>
-        <tr>
-            <td><a href="eng_edit_intervention">Supply and Install Portable Toilet</a></td>
-            <td>Proposed</td>
-            <td>2015/10/12</td>
-        </tr>
-        <tr>
-            <td><a href="man_edit_intervention">Hepatitis Avoidance Training</a></td>
-            <td>Approved</td>
-            <td>2015/10/11</td>
-        </tr>
-        <tr>
-            <td><a href="Supply and Install Storm-proof Home Kit">Supply and Install Storm-proof Home Kit</a></td>
-            <td>Cancelled</td>
-            <td>2015/10/11</td>
-        </tr>
-    </table>-->
     <asp:GridView ID="ListAllClientInterventionsGridView" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">
         <Columns>
             <asp:BoundField DataField="interventionTypes_name" HeaderText="Intervention Type" />

@@ -21,7 +21,7 @@ namespace IMS
         {
             var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
             var conn = new SqlConnection(connString);
-            var selectCommand = new SqlCommand("SELECT * FROM query_user", conn);
+            var selectCommand = new SqlCommand("SELECT * FROM view_users", conn);
             var adapter = new SqlDataAdapter(selectCommand);
 
             var resultSet = new DataSet();

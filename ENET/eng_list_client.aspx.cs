@@ -22,7 +22,8 @@ namespace IMS
             var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
             var conn = new SqlConnection(connString);
             //var selectCommand = new SqlCommand("SELECT c.ID, c.name, c.descriptive, d.Districts FROM clients C INNER JOIN districts d on C.district_id = d.ID", conn);
-            var selectCommand = new SqlCommand("SELECT * FROM eng_list_client", conn);
+            //var selectCommand = new SqlCommand("SELECT * FROM eng_list_client", conn);
+            var selectCommand = new SqlCommand("SELECT * FROM view_client_list", conn);
             var adapter = new SqlDataAdapter(selectCommand);
 
             var resultSet = new DataSet();

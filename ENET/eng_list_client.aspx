@@ -7,7 +7,7 @@
         <Columns>
             <asp:HyperLinkField DataTextField="name" HeaderText="Name" DataNavigateUrlFields="clients_ID" DataNavigateUrlFormatString="~\eng_detail_client.aspx?ID={0}" />
             <asp:BoundField DataField="descriptive" HeaderText="Descriptive Location" />
-            <asp:BoundField DataField="districts" HeaderText="District" />
+            <asp:BoundField DataField="Districts" HeaderText="District" />
         </Columns>
     </asp:GridView>
 </asp:Content>

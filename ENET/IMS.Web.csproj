@@ -175,8 +175,9 @@
     <Content Include="App_Data\IMS_log.ldf">
       <DependentUpon>IMS.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\sql_queries.sql" />
     <Content Include="App_Data\initial_execute.sql" />
+    <Content Include="App_Data\sql_queries.sql" />
+    <Content Include="App_Data\initial_execute_OLD.sql" />
     <Content Include="man_edit_intervention.aspx" />
     <Content Include="man_list_intervention.aspx" />
     <Content Include="eng_create_intervention.aspx" />
