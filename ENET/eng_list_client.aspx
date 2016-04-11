@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_list_client.aspx.cs" Inherits="IMS.eng_list_client" %>
+﻿<%@ Page Title="List All Clients" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_list_client.aspx.cs" Inherits="IMS.eng_list_client" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Clients List</h1>
