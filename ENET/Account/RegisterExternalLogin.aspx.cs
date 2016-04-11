@@ -4,9 +4,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using ENET.Models;
+using IMS.Models;
 
-namespace ENET.Account
+namespace IMS.Account
 {
     public partial class RegisterExternalLogin : System.Web.UI.Page
     {

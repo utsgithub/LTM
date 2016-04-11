@@ -1,14 +1,15 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ENET.Tests
+namespace IMS.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class IMS_UnitTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetClientDetails()
         {
+
         }
     }
 }

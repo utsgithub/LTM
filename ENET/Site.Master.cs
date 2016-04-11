@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 
-namespace ENET
+namespace IMS
 {
     public partial class SiteMaster : MasterPage
     {

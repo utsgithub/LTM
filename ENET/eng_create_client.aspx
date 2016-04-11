@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_create_client.aspx.cs" Inherits="ENET.About" %>
+﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_create_client.aspx.cs" Inherits="IMS.About" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Create New Client</h1>

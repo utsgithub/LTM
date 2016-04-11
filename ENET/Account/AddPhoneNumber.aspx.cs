@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
-using ENET.Models;
+using IMS.Models;
 
-namespace ENET.Account
+namespace IMS.Account
 {
     public partial class AddPhoneNumber : System.Web.UI.Page
     {

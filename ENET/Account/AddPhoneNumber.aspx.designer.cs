@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ENET.Account {
+namespace IMS.Account {
     
     
     public partial class AddPhoneNumber {

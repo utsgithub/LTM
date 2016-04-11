@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ENET {
+namespace IMS {
     
     
     public partial class SiteMaster {

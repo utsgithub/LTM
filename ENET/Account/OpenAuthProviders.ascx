@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OpenAuthProviders.ascx.cs" Inherits="ENET.Account.OpenAuthProviders" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OpenAuthProviders.ascx.cs" Inherits="IMS.Account.OpenAuthProviders" %>
 
 <div id="socialLoginList">
     <h4>Use another service to log in.</h4>

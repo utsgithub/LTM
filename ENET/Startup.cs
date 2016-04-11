@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(ENET.Startup))]
-namespace ENET
+[assembly: OwinStartupAttribute(typeof(IMS.Startup))]
+namespace IMS
 {
     public partial class Startup {
         public void Configuration(IAppBuilder app) {

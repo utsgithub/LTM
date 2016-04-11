@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ENET</RootNamespace>
-    <AssemblyName>ENET</AssemblyName>
+    <RootNamespace>IMS</RootNamespace>
+    <AssemblyName>IMS</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -171,6 +171,12 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="acc_edit_district.aspx" />
+    <Content Include="App_Data\sql_queries.sql" />
+    <Content Include="App_Data\initial_execute.sql" />
+    <Content Include="App_Data\IMS.mdf" />
+    <Content Include="App_Data\IMS_log.ldf">
+      <DependentUpon>IMS.mdf</DependentUpon>
+    </Content>
     <Content Include="man_edit_intervention.aspx" />
     <Content Include="man_list_intervention.aspx" />
     <Content Include="eng_create_intervention.aspx" />
@@ -506,9 +512,7 @@
       <DependentUpon>acc_list_report.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

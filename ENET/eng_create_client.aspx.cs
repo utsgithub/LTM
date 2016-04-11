@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ENET
+namespace IMS
 {
     public partial class end_create_client : System.Web.UI.Page
     {

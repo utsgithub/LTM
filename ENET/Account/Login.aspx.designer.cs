@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ENET.Account {
+namespace IMS.Account {
     
     
     public partial class Login {
@@ -73,6 +73,6 @@ namespace ENET.Account {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ENET.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::IMS.Account.OpenAuthProviders OpenAuthLogin;
     }
 }

@@ -6,9 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ENET.Models;
+using IMS.Models;
 
-namespace ENET.Models
+namespace IMS.Models
 {
     // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -42,7 +42,7 @@ namespace ENET.Models
 }
 
 #region Helpers
-namespace ENET
+namespace IMS
 {
     public static class IdentityHelper
     {

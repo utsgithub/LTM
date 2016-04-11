@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_list_inverventionx.cs" Inherits="ENET.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_list_invervention.aspx.cs" Inherits="IMS.About" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <h1>Interventions List</h1>
   <table width="100%" class="table table-bordered table-hover table-striped">

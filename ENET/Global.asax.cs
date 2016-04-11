@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace ENET
+namespace IMS
 {
     public class Global : HttpApplication
     {

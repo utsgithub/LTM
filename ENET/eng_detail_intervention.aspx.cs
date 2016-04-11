@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ENET
+namespace IMS
 {
     public partial class eng_detail_intervention : System.Web.UI.Page
     {
