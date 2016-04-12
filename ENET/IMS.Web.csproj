@@ -201,6 +201,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="acc_list_report.aspx" />
+    <Content Include="IMS.xsc">
+      <DependentUpon>IMS.xsd</DependentUpon>
+    </Content>
+    <None Include="IMS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IMS.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="IMS.xss">
+      <DependentUpon>IMS.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -361,6 +372,14 @@
     </Compile>
     <Compile Include="acc_edit_district.aspx.designer.cs">
       <DependentUpon>acc_edit_district.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMS.cs">
+      <DependentUpon>IMS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IMS.xsd</DependentUpon>
     </Compile>
     <Compile Include="man_edit_intervention.aspx.cs">
       <DependentUpon>man_edit_intervention.aspx</DependentUpon>

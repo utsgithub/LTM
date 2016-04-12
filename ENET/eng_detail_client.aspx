@@ -2,19 +2,21 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Client Information</h1>
-
     <table class="table">
         <tr>
             <th width="200" nowrap="nowrap">Name:</th>
-            <td><asp:Label ID="NameLabel" runat="server" /></td>
+            <td>
+                <asp:Label ID="NameLabel" runat="server" /></td>
         </tr>
         <tr>
             <th width="200" nowrap="nowrap">Descriptive:</th>
-            <td><asp:Label ID="DescriptiveLabel" runat="server" /></td>
+            <td>
+                <asp:Label ID="DescriptiveLabel" runat="server" /></td>
         </tr>
         <tr>
             <th width="" nowrap="nowrap">District:</th>
-            <td><asp:Label ID="DistrictLabel" runat="server" /></td>
+            <td>
+                <asp:Label ID="DistrictLabel" runat="server" /></td>
         </tr>
     </table>
     <h1>Interventions List</h1>
