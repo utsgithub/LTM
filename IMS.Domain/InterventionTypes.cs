@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace IMS.Domain
 {
-    class InterventionTypes
+    public class InterventionTypes
     {
+        
         public int ID { get; set; }
 
         public string Name { get; set; }

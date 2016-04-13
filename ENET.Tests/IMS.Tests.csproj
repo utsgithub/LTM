@@ -56,6 +56,10 @@
       <Project>{A18F3709-2FD1-4463-AEB8-8A3BD5CF807C}</Project>
       <Name>IMS.Web</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IMS.Domain\IMS.Domain.csproj">
+      <Project>{bd5aa900-3d40-4f6e-a7f4-29058a90dbd8}</Project>
+      <Name>IMS.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

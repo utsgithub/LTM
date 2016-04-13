@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMS.Domain
 {
-    class Users
+    public class Users
     {
         public int ID { get; set; }
 
