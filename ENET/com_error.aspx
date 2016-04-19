@@ -29,6 +29,11 @@
     </style>
     <div id="block_error">
         <div>
+            <h2>
+                Hi, <asp:Label ID="lblName"  runat="server"></asp:Label>, you are <asp:Label ID="lblType"  runat="server"></asp:Label>, 
+                and you maybe do not have permission to borrow this page.
+            </h2>
+            <h2>Hi, you should login first.</h2>
             <h2>Error 404. &nbspOops you've have encountered an error</h2>
             <p>
                 It apperrs that Either something went wrong or the page doesn't exist anymore..<br />

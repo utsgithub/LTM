@@ -10,6 +10,6 @@
 namespace IMS {
     
     
-    public partial class About {
+    public partial class acc_list_users {
     }
 }

@@ -180,7 +180,9 @@
     <Content Include="App_Data\initial_execute_OLD.sql" />
     <Content Include="com_error.aspx" />
     <Content Include="Images\1461091232_user-admin.png" />
+    <Content Include="Images\Distributor-report-icon.png" />
     <Content Include="Images\Office-Girl-icon.png" />
+    <Content Include="Images\sales-report-icon.png" />
     <Content Include="Images\User-Administrator-Blue-icon.png" />
     <Content Include="Images\User-Executive-Green-icon.png" />
     <Content Include="man_edit_intervention.aspx" />

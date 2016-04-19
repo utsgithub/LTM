@@ -21,8 +21,6 @@
             <td>Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</td>
           </tr>
         </table>
-        
-        
         <a class="btn btn-success btn-lg">Approve</a> <a class="btn btn-warning btn-lg">Completed</a>
     </div>
   </div>

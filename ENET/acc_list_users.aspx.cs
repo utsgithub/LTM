@@ -15,23 +15,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DisplayAllUsersSqlConnection();
-        }
-
-        private void DisplayAllUsersSqlConnection()
-        {
-            /*var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
-            var conn = new SqlConnection(connString);
-            var selectCommand = new SqlCommand("SELECT * FROM view_users", conn);
-            var adapter = new SqlDataAdapter(selectCommand);
-            var resultSet = new DataSet(); adapter.Fill(resultSet);
-            ListAllUsersGridView.DataSource = resultSet;
-            ListAllUsersGridView.DataBind(); conn.Close();*/
-
-            var users = new ViewUsersTableAdapter().GetData();
-
-            ListAllUsersGridView.DataSource = users;
-            ListAllUsersGridView.DataBind();
+           
         }
     }
 }

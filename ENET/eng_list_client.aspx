@@ -6,9 +6,6 @@
     <a class="btn btn-primary" style="margin-bottom: 20px;" href="eng_create_client">Create Client</a><br />
     <br />
     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-
-        
-        
         <LayoutTemplate>
             <table runat="server">
                 <tr runat="server">

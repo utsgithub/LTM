@@ -11,7 +11,13 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Todo: if else (block);
+            //Todo: Set 404 Page;
+            if (Session["Name"] != null || Session["Type"] != null)
+            {
+                lblName.Text = Session["Name"].ToString();
+                lblType.Text = Session["Type"].ToString();
+            }
         }
     }
 }

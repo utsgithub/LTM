@@ -11,7 +11,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Abandon();
+            //Session.Abandon();
         }
 
         protected void ButtonE_Click(object sender, EventArgs e)
