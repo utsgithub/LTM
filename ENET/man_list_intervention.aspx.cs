@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using IMS.IMSTableAdapters;
 
 namespace IMS
 {
@@ -11,6 +12,14 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DisplayAllClientsSqlConnection();
+        }
+        private void DisplayAllClientsSqlConnection()
+        {
+            var man_list_intervention = new ViewDetailedInterventionsTableAdapter().GetData();
+
+            ListAllman_list_intervention.DataSource = man_list_intervention;
+            ListAllman_list_intervention.DataBind();
 
         }
     }

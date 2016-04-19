@@ -95,6 +95,14 @@ WHERE (clients_id = @Param1) AND (user_id = @Param2)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="IMSConnectionString (Web.config)" DbObjectName="dbo.view_detail_interventions" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillManListBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetManListBy" GeneratorSourceName="FillManListBy" GetMethodModifier="Public" GetMethodName="GetManListBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetManListBy" UserSourceName="FillManListBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM dbo.view_detail_interventions where status='Proposed'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewUsersTableAdapter" GeneratorDataComponentClassName="ViewUsersTableAdapter" Name="ViewUsers" UserDataComponentName="ViewUsersTableAdapter">
@@ -130,7 +138,7 @@ WHERE (clients_id = @Param1) AND (user_id = @Param2)</CommandText>
   <xs:element name="IMS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IMS" msprop:Generator_UserDSName="IMS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ViewClients" msprop:Generator_TableClassName="ViewClientsDataTable" msprop:Generator_TableVarName="tableViewClients" msprop:Generator_RowChangedName="ViewClientsRowChanged" msprop:Generator_TablePropName="ViewClients" msprop:Generator_RowDeletingName="ViewClientsRowDeleting" msprop:Generator_RowChangingName="ViewClientsRowChanging" msprop:Generator_RowEvHandlerName="ViewClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewClientsRowDeleted" msprop:Generator_RowClassName="ViewClientsRow" msprop:Generator_UserTableName="ViewClients" msprop:Generator_RowEvArgName="ViewClientsRowChangeEvent">
+        <xs:element name="ViewClients" msprop:Generator_TableClassName="ViewClientsDataTable" msprop:Generator_TableVarName="tableViewClients" msprop:Generator_TablePropName="ViewClients" msprop:Generator_RowDeletingName="ViewClientsRowDeleting" msprop:Generator_RowChangingName="ViewClientsRowChanging" msprop:Generator_RowEvHandlerName="ViewClientsRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewClientsRowDeleted" msprop:Generator_UserTableName="ViewClients" msprop:Generator_RowChangedName="ViewClientsRowChanged" msprop:Generator_RowEvArgName="ViewClientsRowChangeEvent" msprop:Generator_RowClassName="ViewClientsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="clients_ID" msprop:Generator_ColumnVarNameInTable="columnclients_ID" msprop:Generator_ColumnPropNameInRow="clients_ID" msprop:Generator_ColumnPropNameInTable="clients_IDColumn" msprop:Generator_UserColumnName="clients_ID" type="xs:int" />
@@ -159,7 +167,7 @@ WHERE (clients_id = @Param1) AND (user_id = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ViewDetailedInterventions" msprop:Generator_TableClassName="ViewDetailedInterventionsDataTable" msprop:Generator_TableVarName="tableViewDetailedInterventions" msprop:Generator_RowChangedName="ViewDetailedInterventionsRowChanged" msprop:Generator_TablePropName="ViewDetailedInterventions" msprop:Generator_RowDeletingName="ViewDetailedInterventionsRowDeleting" msprop:Generator_RowChangingName="ViewDetailedInterventionsRowChanging" msprop:Generator_RowEvHandlerName="ViewDetailedInterventionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDetailedInterventionsRowDeleted" msprop:Generator_RowClassName="ViewDetailedInterventionsRow" msprop:Generator_UserTableName="ViewDetailedInterventions" msprop:Generator_RowEvArgName="ViewDetailedInterventionsRowChangeEvent">
+        <xs:element name="ViewDetailedInterventions" msprop:Generator_TableClassName="ViewDetailedInterventionsDataTable" msprop:Generator_TableVarName="tableViewDetailedInterventions" msprop:Generator_TablePropName="ViewDetailedInterventions" msprop:Generator_RowDeletingName="ViewDetailedInterventionsRowDeleting" msprop:Generator_RowChangingName="ViewDetailedInterventionsRowChanging" msprop:Generator_RowEvHandlerName="ViewDetailedInterventionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDetailedInterventionsRowDeleted" msprop:Generator_UserTableName="ViewDetailedInterventions" msprop:Generator_RowChangedName="ViewDetailedInterventionsRowChanged" msprop:Generator_RowEvArgName="ViewDetailedInterventionsRowChangeEvent" msprop:Generator_RowClassName="ViewDetailedInterventionsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="interventionTypes_ID" msprop:Generator_ColumnVarNameInTable="columninterventionTypes_ID" msprop:Generator_ColumnPropNameInRow="interventionTypes_ID" msprop:Generator_ColumnPropNameInTable="interventionTypes_IDColumn" msprop:Generator_UserColumnName="interventionTypes_ID" type="xs:int" />
@@ -272,7 +280,7 @@ WHERE (clients_id = @Param1) AND (user_id = @Param2)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ViewUsers" msprop:Generator_TableClassName="ViewUsersDataTable" msprop:Generator_TableVarName="tableViewUsers" msprop:Generator_TablePropName="ViewUsers" msprop:Generator_RowDeletingName="ViewUsersRowDeleting" msprop:Generator_RowChangingName="ViewUsersRowChanging" msprop:Generator_RowEvHandlerName="ViewUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewUsersRowDeleted" msprop:Generator_UserTableName="ViewUsers" msprop:Generator_RowChangedName="ViewUsersRowChanged" msprop:Generator_RowEvArgName="ViewUsersRowChangeEvent" msprop:Generator_RowClassName="ViewUsersRow">
+        <xs:element name="ViewUsers" msprop:Generator_TableClassName="ViewUsersDataTable" msprop:Generator_TableVarName="tableViewUsers" msprop:Generator_RowChangedName="ViewUsersRowChanged" msprop:Generator_TablePropName="ViewUsers" msprop:Generator_RowDeletingName="ViewUsersRowDeleting" msprop:Generator_RowChangingName="ViewUsersRowChanging" msprop:Generator_RowEvHandlerName="ViewUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewUsersRowDeleted" msprop:Generator_RowClassName="ViewUsersRow" msprop:Generator_UserTableName="ViewUsers" msprop:Generator_RowEvArgName="ViewUsersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Districts_ID" msprop:Generator_ColumnVarNameInTable="columnDistricts_ID" msprop:Generator_ColumnPropNameInRow="Districts_ID" msprop:Generator_ColumnPropNameInTable="Districts_IDColumn" msprop:Generator_UserColumnName="Districts_ID" type="xs:int" />
