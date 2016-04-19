@@ -178,6 +178,11 @@
     <Content Include="App_Data\initial_execute.sql" />
     <Content Include="App_Data\sql_queries.sql" />
     <Content Include="App_Data\initial_execute_OLD.sql" />
+    <Content Include="com_error.aspx" />
+    <Content Include="Images\1461091232_user-admin.png" />
+    <Content Include="Images\Office-Girl-icon.png" />
+    <Content Include="Images\User-Administrator-Blue-icon.png" />
+    <Content Include="Images\User-Executive-Green-icon.png" />
     <Content Include="man_edit_intervention.aspx" />
     <Content Include="man_list_intervention.aspx" />
     <Content Include="eng_create_intervention.aspx" />
@@ -373,6 +378,13 @@
     </Compile>
     <Compile Include="acc_edit_district.aspx.designer.cs">
       <DependentUpon>acc_edit_district.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="com_error.aspx.cs">
+      <DependentUpon>com_error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="com_error.aspx.designer.cs">
+      <DependentUpon>com_error.aspx</DependentUpon>
     </Compile>
     <Compile Include="IMS.cs">
       <DependentUpon>IMS.xsd</DependentUpon>

@@ -4,40 +4,52 @@
 
     <div class="jumbotron">
         <h1>Intervention Monitoring System</h1>
-        <p class="lead">Welcome to the Intervention Monitoring System exclusively developed for the wonderful people at ENET Care. Get started
+        <p class="lead">
+            Welcome to the Intervention Monitoring System exclusively developed for the wonderful people at ENET Care. Get started
             now and start some interventions right away.
         </p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="Images/User-Executive-Green-icon.png" alt="Site Engineer">
+                <div class="caption">
+                    <h3>Site Engineer</h3>
+                    <p>
+                        <asp:Button ID="ButtonE" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonE_Click" /></p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="Images/User-Administrator-Blue-icon.png" alt="Manager">
+                <div class="caption">
+                    <h3>Manager</h3>
+                    <p>
+                        <asp:Button ID="ButtonM" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonM_Click" /></p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+       <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="Images/Office-Girl-icon.png" alt="Accountant">
+                <div class="caption">
+                    <h3>Accountant</h3>
+                    <p>
+                        <asp:Button ID="ButtonA" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonA_Click" /></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="Images/1461091232_user-admin.png" style="height:256px;" alt="Nobody">
+                <div class="caption">
+                    <h3>Without Login</h3>
+                    <p><a runat="server" href="~/About.aspx" class="btn btn-primary" role="button">Login</a></p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -11,7 +11,22 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Name"] != null || Session["Type"] != null)
+            {
+                lblName.Text = Session["Name"].ToString();
+                lblType.Text = Session["Type"].ToString();
+            }
+            else
+            {
+                Response.Redirect("~/com_error");
+            }
 
+        }
+
+        protected void LBSessionClear_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/default");
         }
     }
 }
