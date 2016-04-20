@@ -9,14 +9,19 @@ namespace IMS.Domain
 {
     public class CoreInfo
     {
-        public int ID;
-        public Client client;
-        public Users user;
-        public int requiredHour;
-        public int requiredCost;
-        public DateTime performedDate;
-        public string state = "Proposed";
+        private int id;
+        private Client client;
+        private Users user;
+        private int requiredHour;
+        private int requiredCost;
+        private DateTime performedDate;
+        private string state = "Proposed";
 
+        public CoreInfo()
+        {
+            client = new Client();
+            user = new Users();
+        }
         public string getState()
         {
             return state;
@@ -25,6 +30,9 @@ namespace IMS.Domain
         {
             this.state = state;
         }
-
+        public Users getUser()
+        {
+            return user;
+        }
     }
 }

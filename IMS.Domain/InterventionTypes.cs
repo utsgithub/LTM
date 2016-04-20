@@ -8,13 +8,13 @@ namespace IMS.Domain
 {
     public class InterventionTypes
     {
-        
-        public int ID { get; set; }
 
-        public string Name { get; set; }
+        private int id;
 
-        public int AmountOfHours { get; set; }
+        private string name;
 
-        public double CostOfMaterials { get; set; }
+        private int hours;
+
+        private double materialCost;
     }
 }

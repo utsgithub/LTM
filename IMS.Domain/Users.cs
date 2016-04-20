@@ -5,24 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace IMS.Domain
+
 {
     public class Users
     {
-        public int ID { get; set; }
+        private int ID;
+        private string username;
+        private string loginname;
+        private string password;
+        private Districts district;
+        private int maxhours;
+        private double maxcost;
+        private UserType type;
 
-        public string Username { get; set; }
+        public Users()
+        {
+            district = new Districts();
+        }
+        
 
-        public string LoginName { get; set; }
+        public bool changePassword(string oldpassword, string password)
+        {
+            if (oldpassword.Equals(this.password))
+            {
+                setPassword(password);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        public string Password { get; set; }
-
-        public Districts district { get; set; }
-
-        public int MaxHours { get; set; }
-
-        public double MaxCost { get; set; }
-
-        public UserType type { get; set; }
-
+        public void setPassword(string password)
+        {
+            this.password = password;
+        }
+        public void setMaxhours(int maxhours)
+        {
+            this.maxhours = maxhours;
+        }
     }
 }

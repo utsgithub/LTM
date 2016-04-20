@@ -13,34 +13,35 @@ namespace IMS.Domain
         public Intervention()
         {
             coreInfo = new CoreInfo();
+            interType = new InterventionTypes();
         }
-        public String validate(string newStage)
+        public bool validate(string newStage)
         {
 
             if (coreInfo.getState() == "Cancelled" || coreInfo.getState() == "Completed")
             {
-                return "Fail";
+                return false;
             }
             else if (coreInfo.getState() == "Approved")
             {
                 if (newStage == "Proposed")
                 {
-                    return "Fail";
+                    return false;
                 }
                 else
                 {
-                    return "Successful";
+                    return true;
                 }
             }
             else
             {
                 if (newStage == "Completed")
                 {
-                    return "Fail";
+                    return false;
                 }
                 else
                 {
-                    return "Successful";
+                    return true;
                 }
 
             }
