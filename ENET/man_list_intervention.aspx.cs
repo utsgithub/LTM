@@ -12,15 +12,8 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DisplayAllClientsSqlConnection();
+           // DisplayAllClientsSqlConnection();
         }
-        private void DisplayAllClientsSqlConnection()
-        {
-            var man_list_intervention = new ViewDetailedInterventionsTableAdapter().GetData();
-
-            ListAllman_list_intervention.DataSource = man_list_intervention;
-            ListAllman_list_intervention.DataBind();
-
-        }
+       
     }
 }

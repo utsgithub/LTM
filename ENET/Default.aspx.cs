@@ -18,7 +18,7 @@ namespace IMS
         {
             Session["Name"] = "Tim";
             Session["Type"] = "Site Engineer";
-
+            Session["UID"] = 1;
             Response.Redirect("~/about.aspx");
         }
 
@@ -26,7 +26,7 @@ namespace IMS
         {
             Session["Name"] = "Olivia";
             Session["Type"] = "Manager";
-
+            Session["UID"] = 4;
             Response.Redirect("~/about.aspx");
         }
 
@@ -34,7 +34,7 @@ namespace IMS
         {
             Session["Name"] = "Peter";
             Session["Type"] = "Accountant";
-
+            Session["UID"] = 7;
             Response.Redirect("~/about.aspx");
         }
     }

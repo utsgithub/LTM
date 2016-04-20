@@ -10,16 +10,24 @@
 namespace IMS {
     
     
-    public partial class man_list_intervention
-    {
+    public partial class man_dashboard {
         
         /// <summary>
-        /// ListAllman_list_intervention control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ListAllman_list_intervention;
+        protected global::System.Web.UI.WebControls.ListView ListView1;
+        
+        /// <summary>
+        /// rsProposedInterventions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource rsProposedInterventions;
     }
 }

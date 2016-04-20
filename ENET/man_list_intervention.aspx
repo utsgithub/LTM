@@ -1,43 +1,63 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="man_list_intervention.aspx.cs" Inherits="IMS.man_list_intervention" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="man_list_intervention.aspx.cs" Inherits="IMS.man_dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>“Proposed” interventions</h1>
-    <table width="100%" class="table table-bordered table-hover table-striped">
-        <tr>
-            <th>intervention type</th>
-            <th>client</th>
-            <th>Site Engineer </th>
-            <th>date </th>
-        </tr>
-        <tr>
-            <td><a runat="server" href="~/man_edit_intervention">Supply and Install Portable Toilet</a></td>
-            <td>Family of Josiah</td>
-            <td>John</td>
-            <td>2015/10/12</td>
-        </tr>
-        <tr>
-            <td><a runat="server" href="~/man_edit_intervention">Hepatitis Avoidance Training</a></td>
-            <td>Family of Ruth</td>
-            <td>Tim</td>
-            <td>2015/10/11</td>
-        </tr>
-        <tr>
-            <td><a runat="server" href="~/man_edit_intervention">Supply and Install Storm-proof Home Kit</a></td>
-            <td>Family of Peter</td>
-            <td>Jeffery</td>
-            <td>2015/10/11</td>
-        </tr>
-    </table>
-    <asp:GridView ID="ListAllman_list_intervention" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">
-        <Columns>
-            <asp:boundfield DataField="interventionTypes_name" HeaderText="Intervention Type" />
-            <asp:boundfield DataField="clients_name" HeaderText="Client" />
-            <asp:boundfield DataField="userName" HeaderText="Site Engineer" />
-            <asp:boundfield DataField="iDate" HeaderText="Date" />
-           <%-- <asp:HyperLinkField DataTextField="" HeaderText="Name" DataNavigateUrlFields="clients_ID" DataNavigateUrlFormatString="~\eng_detail_client.aspx?ID={0}" />
-            <asp:BoundField DataField="descriptive" HeaderText="Descriptive Location" />
-            <asp:BoundField DataField="Districts" HeaderText="District" />--%>
-            
-        </Columns>
-    </asp:GridView>
-</asp:Content>
+    <asp:ListView ID="ListView1" runat="server" DataSourceID="rsProposedInterventions">
+        <EmptyDataTemplate>
+            <table runat="server" style="" class="table table-bordered table-hover table-striped">
+                <tr>
+                    <td>No data was returned.</td>
+                </tr>
+            </table>
+        </EmptyDataTemplate>
+        <ItemTemplate>
+            <tr style="">
+                <td>
+                     <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("interventionTypes_name") %>' PostBackUrl='<%#"~/man_edit_intervention?iid="+Eval("interventionTypes_ID")%>'></asp:LinkButton>
+
+                </td>
+                <td>
+                    <asp:Label ID="clients_nameLabel" runat="server" Text='<%# Eval("clients_name") %>' />
+                </td>
+                <td>
+                    <asp:Label ID="userNameLabel" runat="server" Text='<%# Eval("userName") %>' />
+                </td>
+                <td>
+                    <asp:Label ID="iDateLabel" runat="server" Text='<%# Eval("iDate") %>' />
+                </td>
+            </tr>
+        </ItemTemplate>
+        <LayoutTemplate>
+            <table runat="server">
+                <tr runat="server">
+                    <td runat="server">
+                        <table id="itemPlaceholderContainer" runat="server" border="0"  class="table table-bordered table-hover table-striped">
+                            <tr runat="server" style="">
+                                <th runat="server">Intervention Name</th>
+                                <th runat="server">Clients Name</th>
+                                <th runat="server">User Name</th>
+                                <th runat="server">Date</th>
+                            </tr>
+                            <tr id="itemPlaceholder" runat="server">
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr runat="server">
+                    <td runat="server" style="">
+                        <asp:DataPager ID="DataPager1" runat="server">
+                            <Fields>
+                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
+                            </Fields>
+                        </asp:DataPager>
+                    </td>
+                </tr>
+            </table>
+        </LayoutTemplate>
+    </asp:ListView>
+    <asp:SqlDataSource ID="rsProposedInterventions" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [interventionTypes_ID], [interventionTypes_name], [clients_name], [userName], [iDate] FROM [view_detail_interventions] WHERE ([status] = @status)">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="Proposed" Name="status" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    </asp:Content>

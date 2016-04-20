@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Create Intervention" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_create_intervention.aspx.cs" Inherits="IMS.About" %>
+﻿<%@ Page Title="Create Intervention" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_create_intervention.aspx.cs" Inherits="IMS.eng_dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Create Intervention</h1>

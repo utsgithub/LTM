@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="man_edit_intervention.aspx.cs" Inherits="IMS.About" %>
+﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="man_edit_intervention.aspx.cs" Inherits="IMS.man_dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -22,8 +22,6 @@
                     <td>Bootstrap makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</td>
                 </tr>
             </table>
-
-
             <a class="btn btn-success btn-lg">Approve</a> <a class="btn btn-danger btn-lg">Not Approve</a>
         </div>
     </div>

@@ -10,6 +10,6 @@
 namespace IMS {
     
     
-    public partial class About {
+    public partial class eng_dashboard {
     }
 }

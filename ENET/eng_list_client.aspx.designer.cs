@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class eng_list_client {
+    public partial class eng_dashboard {
         
         /// <summary>
         /// ListView1 control.

@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class eng_detail_client {
+    public partial class eng_dashboard {
         
         /// <summary>
         /// NameLabel control.

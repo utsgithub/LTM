@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Detailed Intervention View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_intervention.aspx.cs" Inherits="IMS.About" %>
+﻿<%@ Page Title="Detailed Intervention View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_intervention.aspx.cs" Inherits="IMS.eng_dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
