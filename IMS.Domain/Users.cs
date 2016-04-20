@@ -22,8 +22,16 @@ namespace IMS.Domain
         {
             district = new Districts();
         }
-        
 
+        public bool validateLogin(string loginname, string password)
+        {
+            if (password.Equals(this.password) && loginname.Equals(this.loginname))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         public bool changePassword(string oldpassword, string password)
         {
             if (oldpassword.Equals(this.password))
@@ -37,6 +45,10 @@ namespace IMS.Domain
             }
         }
 
+        public void setLoginname(string loginname)
+        {
+            this.loginname = loginname;
+        }
         public void setPassword(string password)
         {
             this.password = password;
