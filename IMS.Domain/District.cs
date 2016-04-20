@@ -8,9 +8,9 @@ namespace IMS.Domain
 {
     public class Districts
     {
-        public int ID { get; set; }
+        private int id;
 
-        public string District { get; set; }
+        private string district;
 
     }
 }

@@ -8,12 +8,18 @@ namespace IMS.Domain
 {
     public class Client
     {
-        public int ID { get; set; }
+        private int id;
 
-        public string Name { get; set; }
+        private string name;
 
-        public string Description { get; set; }
+        private string description;
 
-        public Districts district { get; set; }
+        private Districts district;
+
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
     }
 }

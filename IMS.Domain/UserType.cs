@@ -8,8 +8,16 @@ namespace IMS.Domain
 {
     public class UserType
     {
-        public int ID { get; set; }
+        private int id;
+        private string userType;
 
-        public string UserTypeName { get; set; }
+        public void setUserType(string userType)
+        {
+            this.userType = userType;
+        }
+        public void setId(int id)
+        {
+            this.id = id;
+        }
     }
 }
