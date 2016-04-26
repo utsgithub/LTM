@@ -33,6 +33,9 @@ namespace IMS.DataLayer
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
+    partial void InsertcoreInfo(coreInfo instance);
+    partial void UpdatecoreInfo(coreInfo instance);
+    partial void DeletecoreInfo(coreInfo instance);
     #endregion
 		
 		public IMSDataContext() : 
@@ -70,6 +73,14 @@ namespace IMS.DataLayer
 			get
 			{
 				return this.GetTable<user>();
+			}
+		}
+		
+		public System.Data.Linq.Table<coreInfo> coreInfos
+		{
+			get
+			{
+				return this.GetTable<coreInfo>();
 			}
 		}
 	}
@@ -279,6 +290,308 @@ namespace IMS.DataLayer
 					this._AspNetUserID = value;
 					this.SendPropertyChanged("AspNetUserID");
 					this.OnAspNetUserIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.coreInfo")]
+	public partial class coreInfo : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private System.Nullable<int> _iType_id;
+		
+		private System.Nullable<int> _client_id;
+		
+		private System.Nullable<int> _labour;
+		
+		private System.Nullable<int> _cost;
+		
+		private System.Nullable<int> _user_id;
+		
+		private System.Nullable<System.DateTime> _iDate;
+		
+		private string _status;
+		
+		private string _comments;
+		
+		private System.Nullable<int> _reamaining;
+		
+		private System.Nullable<System.DateTime> _date_recent_visit;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OniType_idChanging(System.Nullable<int> value);
+    partial void OniType_idChanged();
+    partial void Onclient_idChanging(System.Nullable<int> value);
+    partial void Onclient_idChanged();
+    partial void OnlabourChanging(System.Nullable<int> value);
+    partial void OnlabourChanged();
+    partial void OncostChanging(System.Nullable<int> value);
+    partial void OncostChanged();
+    partial void Onuser_idChanging(System.Nullable<int> value);
+    partial void Onuser_idChanged();
+    partial void OniDateChanging(System.Nullable<System.DateTime> value);
+    partial void OniDateChanged();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
+    partial void OncommentsChanging(string value);
+    partial void OncommentsChanged();
+    partial void OnreamainingChanging(System.Nullable<int> value);
+    partial void OnreamainingChanged();
+    partial void Ondate_recent_visitChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_recent_visitChanged();
+    #endregion
+		
+		public coreInfo()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iType_id", DbType="Int")]
+		public System.Nullable<int> iType_id
+		{
+			get
+			{
+				return this._iType_id;
+			}
+			set
+			{
+				if ((this._iType_id != value))
+				{
+					this.OniType_idChanging(value);
+					this.SendPropertyChanging();
+					this._iType_id = value;
+					this.SendPropertyChanged("iType_id");
+					this.OniType_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_client_id", DbType="Int")]
+		public System.Nullable<int> client_id
+		{
+			get
+			{
+				return this._client_id;
+			}
+			set
+			{
+				if ((this._client_id != value))
+				{
+					this.Onclient_idChanging(value);
+					this.SendPropertyChanging();
+					this._client_id = value;
+					this.SendPropertyChanged("client_id");
+					this.Onclient_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_labour", DbType="Int")]
+		public System.Nullable<int> labour
+		{
+			get
+			{
+				return this._labour;
+			}
+			set
+			{
+				if ((this._labour != value))
+				{
+					this.OnlabourChanging(value);
+					this.SendPropertyChanging();
+					this._labour = value;
+					this.SendPropertyChanged("labour");
+					this.OnlabourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cost", DbType="Int")]
+		public System.Nullable<int> cost
+		{
+			get
+			{
+				return this._cost;
+			}
+			set
+			{
+				if ((this._cost != value))
+				{
+					this.OncostChanging(value);
+					this.SendPropertyChanging();
+					this._cost = value;
+					this.SendPropertyChanged("cost");
+					this.OncostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="Int")]
+		public System.Nullable<int> user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_iDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> iDate
+		{
+			get
+			{
+				return this._iDate;
+			}
+			set
+			{
+				if ((this._iDate != value))
+				{
+					this.OniDateChanging(value);
+					this.SendPropertyChanging();
+					this._iDate = value;
+					this.SendPropertyChanged("iDate");
+					this.OniDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="NVarChar(255)")]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_comments", DbType="NVarChar(255)")]
+		public string comments
+		{
+			get
+			{
+				return this._comments;
+			}
+			set
+			{
+				if ((this._comments != value))
+				{
+					this.OncommentsChanging(value);
+					this.SendPropertyChanging();
+					this._comments = value;
+					this.SendPropertyChanged("comments");
+					this.OncommentsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reamaining", DbType="Int")]
+		public System.Nullable<int> reamaining
+		{
+			get
+			{
+				return this._reamaining;
+			}
+			set
+			{
+				if ((this._reamaining != value))
+				{
+					this.OnreamainingChanging(value);
+					this.SendPropertyChanging();
+					this._reamaining = value;
+					this.SendPropertyChanged("reamaining");
+					this.OnreamainingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_recent_visit", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_recent_visit
+		{
+			get
+			{
+				return this._date_recent_visit;
+			}
+			set
+			{
+				if ((this._date_recent_visit != value))
+				{
+					this.Ondate_recent_visitChanging(value);
+					this.SendPropertyChanging();
+					this._date_recent_visit = value;
+					this.SendPropertyChanged("date_recent_visit");
+					this.Ondate_recent_visitChanged();
 				}
 			}
 		}
