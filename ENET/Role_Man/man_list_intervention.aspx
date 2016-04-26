@@ -51,5 +51,5 @@
         </LayoutTemplate>
 
     </asp:ListView>
-    <asp:SqlDataSource ID="rsProposedInterventions" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [coreInfo_ID], [interventionTypes_name], [userName], [iDate], [loginName] FROM [view_detail_interventions]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="rsProposedInterventions" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [coreInfo_ID], [interventionTypes_name], [userName], [iDate], [loginName] FROM [view_detail_interventions] where status='Proposed'"></asp:SqlDataSource>
 </asp:Content>
