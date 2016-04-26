@@ -63,7 +63,8 @@
         <ItemTemplate>
             <tr style="">
                 <td>
-                    <asp:Label ID="interventionTypes_nameLabel" runat="server" Text='' />
+                    <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("interventionTypes_name") %>' 
+                        PostBackUrl='<%#"eng_detail_intervention?coreid="+Eval("coreInfo_ID")%>'></asp:LinkButton>
 
                 </td>
                 <td>
@@ -100,21 +101,9 @@
                 </tr>
             </table>
         </LayoutTemplate>
-        <SelectedItemTemplate>
-            <tr style="">
-                <td>
-                    <asp:Label ID="interventionTypes_nameLabel" runat="server" Text='<%# Eval("interventionTypes_name") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("status") %>' />
-                </td>
-                <td>
-                    <asp:Label ID="iDateLabel" runat="server" Text='<%# Eval("iDate") %>' />
-                </td>
-            </tr>
-        </SelectedItemTemplate>
+   
     </asp:ListView>
-    <asp:SqlDataSource ID="rsCliInt" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [interventionTypes_name], [status], [iDate] FROM [view_detail_interventions] WHERE ([clients_ID] = @clients_ID)">
+    <asp:SqlDataSource ID="rsCliInt" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [interventionTypes_name], [status], [iDate], [coreInfo_ID] FROM [view_detail_interventions] WHERE ([clients_ID] = @clients_ID)">
         <SelectParameters>
             <asp:QueryStringParameter DefaultValue="0" Name="clients_ID" QueryStringField="cid" Type="Int32" />
         </SelectParameters>
