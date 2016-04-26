@@ -17,7 +17,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int UID = int.Parse(User.Identity.GetUserId());
+            //int UID = int.Parse(User.Identity.GetUserId());
             DisplayAllClientsSqlConnection();
         }
 
