@@ -11,19 +11,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Name"] != null 
-                && Session["Type"].ToString() == "Manager"
-                && Session["UID"] !=null)
-            {
-                //lblName.Text = Session["Name"].ToString();
-                //lblType.Text = Session["Type"].ToString();
-            }
-            else
-            {
-                //lblName.Text = Session["Name"].ToString();
-                //lblType.Text = Session["Type"].ToString();
-                Response.Redirect("~/com_error");
-            }
+            Response.Redirect("man_list_intervention");
         }
     }
 }

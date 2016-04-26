@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IMS_Sync" Class="IMSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=IMS_Sync;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="loginName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="district_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maxHours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maxCost" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="userType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AspNetUserID" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

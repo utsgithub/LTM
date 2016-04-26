@@ -50,10 +50,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Fake Entry</a></li>
-                        <li><a runat="server" href="~/eng_dashboard">Site Engineer</a></li>
-                        <li><a runat="server" href="~/man_dashboard">Manager</a></li>
-                        <li><a runat="server" href="~/acc_dashboard">Accountant</a></li>
+                        <li><a runat="server" href="~/Role_Eng/eng_dashboard.aspx">Site Engineer</a></li>
+                        <li><a runat="server" href="~/Role_Man/man_dashboard.aspx">Manager</a></li>
+                        <li><a runat="server" href="~/Role_Acc/acc_dashboard.aspx">Accountant</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -65,6 +64,7 @@
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li><asp:HyperLink runat="server" NavigateUrl="~/Account/ManagePassword.aspx" Text="Change Password"></asp:HyperLink></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>

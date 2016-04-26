@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class acc_list_users {
+    public partial class acc_edit_district {
         
         /// <summary>
         /// rsAccEdit control.
@@ -22,21 +22,39 @@ namespace IMS {
         protected global::System.Web.UI.WebControls.SqlDataSource rsAccEdit;
         
         /// <summary>
-        /// FormView1 control.
+        /// rsAccViewUsersRow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource rsAccViewUsersRow;
         
         /// <summary>
-        /// rsDistricts control.
+        /// rsDisLists control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource rsDistricts;
+        protected global::System.Web.UI.WebControls.SqlDataSource rsDisLists;
+        
+        /// <summary>
+        /// ddlDistinct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDistinct;
+        
+        /// <summary>
+        /// LinkButtonSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonSubmit;
     }
 }

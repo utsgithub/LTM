@@ -16,7 +16,7 @@
                     <asp:Label ID="users_IDLabel" runat="server" Text='<%# Eval("users_ID") %>' />
                 </td>
                 <td>
-                    <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("userName") %>' PostBackUrl='<%#"~/acc_edit_district?uid="+Eval("users_ID")%>'></asp:LinkButton>
+                    <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("userName") %>' PostBackUrl='<%#"acc_edit_district?uid="+Eval("users_ID")+"&did="+Eval("district_ID")%>'></asp:LinkButton>
                 </td>
                 <td>
                     <asp:Label ID="DistrictsLabel" runat="server" Text='<%# Eval("Districts") %>' />
@@ -54,5 +54,5 @@
             </table>
         </LayoutTemplate>        
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT users_ID, userName, Districts, userType FROM view_users WHERE (userType = 'Site Engineer') OR (userType = 'Manager')"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT users_ID, userName, Districts, district_ID, userType FROM view_users WHERE (userType = 'Site Engineer') OR (userType = 'Manager')"></asp:SqlDataSource>
 </asp:Content>

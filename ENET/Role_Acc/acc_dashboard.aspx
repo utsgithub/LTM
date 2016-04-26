@@ -5,22 +5,22 @@
     <div class="row">
         <div class="col-md-3">
             <div class="thumbnail">
-                <img src="Images/Distributor-report-icon.png" alt="See a list of all Site Engineers and Managers">
+                <img runat="server" src="~/Images/Distributor-report-icon.png" alt="See a list of all Site Engineers and Managers">
                 <div class="caption">
                     <h3>User List</h3>
                     <p>
-                        <a href="~/acc_list_users.aspx" runat="server" class="btn btn-primary">Go to</a>
+                        <a href="acc_list_users.aspx" runat="server" class="btn btn-primary">Go to</a>
                     </p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="thumbnail">
-                <img src="Images/sales-report-icon.png" alt="Manager">
+                <img runat="server" src="~/Images/sales-report-icon.png" alt="Manager">
                 <div class="caption">
                     <h3>Report</h3>
                     <p>
-                        <a runat="server" class="btn btn-primary" href="~/acc_list_report.aspx">Go to</a>
+                        <a runat="server" class="btn btn-primary" href="acc_list_report.aspx">Go to</a>
                     </p>
                 </div>
             </div>

@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class man_dashboard {
+    public partial class man_list_intervention {
         
         /// <summary>
         /// ListView1 control.

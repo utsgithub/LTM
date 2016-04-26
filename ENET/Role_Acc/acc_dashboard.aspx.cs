@@ -12,19 +12,7 @@ namespace IMS
         //Todo: Error Page: Japanese
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Name"] != null 
-                && Session["UID"]!=null
-                && Session["Type"].ToString() == "Accountant")
-            {
-                //lblName.Text = Session["Name"].ToString();
-                //lblType.Text = Session["Type"].ToString();
-            }
-            else
-            {
-                //lblName.Text = Session["Name"].ToString();
-                //lblType.Text = Session["Type"].ToString();
-                Response.Redirect("~/com_error");
-            }
+            
         }
     }
 }
