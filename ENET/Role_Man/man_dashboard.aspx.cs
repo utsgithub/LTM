@@ -11,7 +11,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Response.Redirect("man_list_intervention");
+            Response.Redirect("man_list_intervention");
         }
     }
 }

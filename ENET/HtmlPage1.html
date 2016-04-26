@@ -9,5 +9,11 @@
     Asp.net2016
     <!-- Conne -->
     DefaultConnection
+    <!-- Password -->
+    Abc123!
+    <!-- Table Class-->
+    table table-bordered table-striped table-hover
+    <!-- LinkButton -->
+    <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("userName") %>' PostBackUrl='<%#"acc_edit_district?uid="+Eval("users_ID")+"&did="+Eval("district_ID")%>'></asp:LinkButton>
 </body>
 </html>
