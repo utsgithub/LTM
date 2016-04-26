@@ -10,10 +10,10 @@
             <table runat="server">
                 <tr runat="server">
                     <td runat="server">
-                        <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                        <table id="itemPlaceholderContainer" runat="server" border="0" style="" class="table table-bordered">
                             <tr runat="server" style="">
-                                <th runat="server">name</th>
-                                <th runat="server">descriptive</th>
+                                <th runat="server">Name</th>
+                                <th runat="server">Descriptive</th>
                                 <th runat="server">Districts</th>
                                 <th runat="server">clients_ID</th>
                             </tr>
