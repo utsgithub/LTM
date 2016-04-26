@@ -56,7 +56,7 @@
         
         
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IMSConnectionString %>" 
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
         SelectCommand="SELECT [name], [descriptive], [Districts], [clients_ID] FROM [view_client_list]">
     </asp:SqlDataSource>
     &nbsp;<asp:GridView ID="ListAllClientsGridView" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">

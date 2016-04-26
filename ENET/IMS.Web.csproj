@@ -170,7 +170,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="acc_edit_district.aspx" />
+    <Content Include="Role_Acc\acc_edit_district.aspx" />
     <Content Include="App_Data\IMS.mdf" />
     <Content Include="App_Data\IMS_log.ldf">
       <DependentUpon>IMS.mdf</DependentUpon>
@@ -185,19 +185,19 @@
     <Content Include="Images\sales-report-icon.png" />
     <Content Include="Images\User-Administrator-Blue-icon.png" />
     <Content Include="Images\User-Executive-Green-icon.png" />
-    <Content Include="man_edit_intervention.aspx" />
-    <Content Include="man_list_intervention.aspx" />
-    <Content Include="eng_create_intervention.aspx" />
-    <Content Include="eng_dashboard.aspx" />
-    <Content Include="acc_list_users.aspx" />
-    <Content Include="eng_create_client.aspx" />
-    <Content Include="eng_detail_client.aspx" />
-    <Content Include="acc_dashboard.aspx" />
-    <Content Include="eng_list_client.aspx" />
-    <Content Include="eng_list_invervention.aspx" />
-    <Content Include="eng_detail_intervention.aspx" />
-    <Content Include="eng_edit_intervention.aspx" />
-    <Content Include="man_dashboard.aspx" />
+    <Content Include="Role_Man\man_edit_intervention.aspx" />
+    <Content Include="Role_Man\man_list_intervention.aspx" />
+    <Content Include="Role_Eng\eng_create_intervention.aspx" />
+    <Content Include="Role_Eng\eng_dashboard.aspx" />
+    <Content Include="Role_Acc\acc_list_users.aspx" />
+    <Content Include="Role_Eng\eng_create_client.aspx" />
+    <Content Include="Role_Eng\eng_detail_client.aspx" />
+    <Content Include="Role_Acc\acc_dashboard.aspx" />
+    <Content Include="Role_Eng\eng_list_client.aspx" />
+    <Content Include="Role_Eng\eng_list_invervention.aspx" />
+    <Content Include="Role_Eng\eng_detail_intervention.aspx" />
+    <Content Include="Role_Eng\eng_edit_intervention.aspx" />
+    <Content Include="Role_Man\man_dashboard.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -207,11 +207,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="acc_list_report.aspx" />
+    <Content Include="Role_Acc\acc_list_report.aspx" />
     <Content Include="IMS.xsc">
       <DependentUpon>IMS.xsd</DependentUpon>
     </Content>
-    <Content Include="WebForm1.aspx" />
     <None Include="IMS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -220,6 +219,9 @@
     <Content Include="IMS.xss">
       <DependentUpon>IMS.xsd</DependentUpon>
     </Content>
+    <Content Include="Role_Acc\Web.config" />
+    <Content Include="Role_Eng\Web.config" />
+    <Content Include="Role_Man\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -374,11 +376,11 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="acc_edit_district.aspx.cs">
+    <Compile Include="Role_Acc\acc_edit_district.aspx.cs">
       <DependentUpon>acc_edit_district.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="acc_edit_district.aspx.designer.cs">
+    <Compile Include="Role_Acc\acc_edit_district.aspx.designer.cs">
       <DependentUpon>acc_edit_district.aspx</DependentUpon>
     </Compile>
     <Compile Include="com_error.aspx.cs">
@@ -396,95 +398,95 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IMS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="man_edit_intervention.aspx.cs">
+    <Compile Include="Role_Man\man_edit_intervention.aspx.cs">
       <DependentUpon>man_edit_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="man_edit_intervention.aspx.designer.cs">
+    <Compile Include="Role_Man\man_edit_intervention.aspx.designer.cs">
       <DependentUpon>man_edit_intervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="man_list_intervention.aspx.cs">
+    <Compile Include="Role_Man\man_list_intervention.aspx.cs">
       <DependentUpon>man_list_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="man_list_intervention.aspx.designer.cs">
+    <Compile Include="Role_Man\man_list_intervention.aspx.designer.cs">
       <DependentUpon>man_list_intervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_create_intervention.aspx.cs">
+    <Compile Include="Role_Eng\eng_create_intervention.aspx.cs">
       <DependentUpon>eng_create_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_create_intervention.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_create_intervention.aspx.designer.cs">
       <DependentUpon>eng_create_intervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_dashboard.aspx.cs">
+    <Compile Include="Role_Eng\eng_dashboard.aspx.cs">
       <DependentUpon>eng_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_dashboard.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_dashboard.aspx.designer.cs">
       <DependentUpon>eng_dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="acc_list_users.aspx.cs">
+    <Compile Include="Role_Acc\acc_list_users.aspx.cs">
       <DependentUpon>acc_list_users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="acc_list_users.aspx.designer.cs">
+    <Compile Include="Role_Acc\acc_list_users.aspx.designer.cs">
       <DependentUpon>acc_list_users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_create_client.aspx.cs">
+    <Compile Include="Role_Eng\eng_create_client.aspx.cs">
       <DependentUpon>eng_create_client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_create_client.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_create_client.aspx.designer.cs">
       <DependentUpon>eng_create_client.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_detail_client.aspx.cs">
+    <Compile Include="Role_Eng\eng_detail_client.aspx.cs">
       <DependentUpon>eng_detail_client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_detail_client.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_detail_client.aspx.designer.cs">
       <DependentUpon>eng_detail_client.aspx</DependentUpon>
     </Compile>
-    <Compile Include="acc_dashboard.aspx.cs">
+    <Compile Include="Role_Acc\acc_dashboard.aspx.cs">
       <DependentUpon>acc_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="acc_dashboard.aspx.designer.cs">
+    <Compile Include="Role_Acc\acc_dashboard.aspx.designer.cs">
       <DependentUpon>acc_dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_list_client.aspx.cs">
+    <Compile Include="Role_Eng\eng_list_client.aspx.cs">
       <DependentUpon>eng_list_client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_list_client.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_list_client.aspx.designer.cs">
       <DependentUpon>eng_list_client.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_list_invervention.aspx.cs">
+    <Compile Include="Role_Eng\eng_list_invervention.aspx.cs">
       <DependentUpon>eng_list_invervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_list_invervention.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_list_invervention.aspx.designer.cs">
       <DependentUpon>eng_list_invervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_detail_intervention.aspx.cs">
+    <Compile Include="Role_Eng\eng_detail_intervention.aspx.cs">
       <DependentUpon>eng_detail_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_detail_intervention.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_detail_intervention.aspx.designer.cs">
       <DependentUpon>eng_detail_intervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="eng_edit_intervention.aspx.cs">
+    <Compile Include="Role_Eng\eng_edit_intervention.aspx.cs">
       <DependentUpon>eng_edit_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="eng_edit_intervention.aspx.designer.cs">
+    <Compile Include="Role_Eng\eng_edit_intervention.aspx.designer.cs">
       <DependentUpon>eng_edit_intervention.aspx</DependentUpon>
     </Compile>
-    <Compile Include="man_dashboard.aspx.cs">
+    <Compile Include="Role_Man\man_dashboard.aspx.cs">
       <DependentUpon>man_dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="man_dashboard.aspx.designer.cs">
+    <Compile Include="Role_Man\man_dashboard.aspx.designer.cs">
       <DependentUpon>man_dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -539,19 +541,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="acc_list_report.aspx.cs">
+    <Compile Include="Role_Acc\acc_list_report.aspx.cs">
       <DependentUpon>acc_list_report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="acc_list_report.aspx.designer.cs">
+    <Compile Include="Role_Acc\acc_list_report.aspx.designer.cs">
       <DependentUpon>acc_list_report.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

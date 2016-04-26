@@ -42,15 +42,7 @@ namespace IMS
                 DistrictLabel.Text = reader.GetString(4); } }
             reader.Close(); conn.Close();*/
 
-            var client = new ViewClientsTableAdapter().FindClient(id);
-
-            foreach(DataRow row in client.Rows)
-            {
-                NameLabel.Text = row["name"] as string;
-                DescriptiveLabel.Text = row["descriptive"] as string;
-                DistrictLabel.Text = row["Districts"] as string;
-            }
-
+          
         }
         
         private void DisplayClientInterventionsSqlConnection(int id, int user_id)
@@ -70,10 +62,7 @@ namespace IMS
             ListAllClientInterventionsGridView.DataSource = resultSet;
             ListAllClientInterventionsGridView.DataBind(); conn.Close();*/
 
-            var interventions = new ViewDetailedInterventionsTableAdapter().GetInterventions(id, 1);
-
-            ListAllClientInterventionsGridView.DataSource = interventions;
-            ListAllClientInterventionsGridView.DataBind();
+         
         }
     }
 }

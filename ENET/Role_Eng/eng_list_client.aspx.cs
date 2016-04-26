@@ -33,10 +33,6 @@ namespace IMS
 
             
             // Typed Data Sets
-            var clients_table = new ViewClientsTableAdapter().GetData();
-
-            ListAllClientsGridView.DataSource = clients_table;
-            ListAllClientsGridView.DataBind();
         }
     }
 }
