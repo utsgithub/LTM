@@ -58,9 +58,9 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav">
-                                <li><asp:HyperLink ID="eng_link" runat="server" Text="Site Engineer" NavigateUrl="~/eng_dashboard"></asp:HyperLink></li>
-                                <li><asp:HyperLink ID="man_link" runat="server" Text="Manager" NavigateUrl="~/eng_dashboard"></asp:HyperLink></li>
-                                <li><asp:HyperLink ID="acc_link" runat="server" Text="Accountant" NavigateUrl="~/eng_dashboard" ></asp:HyperLink></li>
+                                <li><asp:HyperLink ID="eng_link" runat="server" Text="Site Engineer" NavigateUrl="~/Role_Eng/eng_dashboard"></asp:HyperLink></li>
+                                <li><asp:HyperLink ID="man_link" runat="server" Text="Manager" NavigateUrl="~/Role_Man/man_dashboard"></asp:HyperLink></li>
+                                <li><asp:HyperLink ID="acc_link" runat="server" Text="Accountant" NavigateUrl="~/Role_Acc/acc_dashboard" ></asp:HyperLink></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>

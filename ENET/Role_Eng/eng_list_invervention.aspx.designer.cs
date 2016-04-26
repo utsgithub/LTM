@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class eng_list_invervention {
+    public partial class eng_dashboard {
         
         /// <summary>
         /// ListView1 control.
@@ -29,14 +29,5 @@ namespace IMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// table_eng_list_invervention control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView table_eng_list_invervention;
     }
 }

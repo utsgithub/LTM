@@ -126,19 +126,19 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IMSConnectionString %>" SelectCommand="SELECT [interventionTypes_name], [clients_name], [status], [iDate] FROM [view_detail_interventions]"></asp:SqlDataSource>
-    <asp:GridView ID="table_eng_list_invervention" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-hover table-striped">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [interventionTypes_name], [clients_name], [status], [iDate] FROM [view_detail_interventions]"></asp:SqlDataSource>
+    <%--<asp:GridView ID="table_eng_list_invervention" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-hover table-striped">
         <Columns>
             <asp:BoundField DataField="" HeaderText="Intervention Type" />
             <asp:BoundField DataField="" HeaderText="Client" />
             <asp:BoundField DataField="" HeaderText="Status" />
             <asp:BoundField DataField="" HeaderText="Date" />
         </Columns>
-    </asp:GridView>
+    </asp:GridView>--%>
 
     <table width="100%" class="table table-bordered table-hover table-striped">
         <tr>
-            <th>intervention type</th>
+            <th>Intervention Type</th>
             <th>client</th>
             <th>Status</th>
             <th>date </th>
