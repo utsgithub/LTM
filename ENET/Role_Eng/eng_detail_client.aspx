@@ -64,7 +64,7 @@
             <tr style="">
                 <td>
                     <asp:LinkButton ID="lnk_ViewDetails" runat="server" Text='<%# Bind("interventionTypes_name") %>' 
-                        PostBackUrl='<%#"eng_detail_intervention?coreid="+Eval("coreInfo_ID")%>'></asp:LinkButton>
+                        PostBackUrl='<%#"eng_detail_intervention?coreid="+Eval("coreInfo_ID")+"&cid="+Request.QueryString["cid"]%>'></asp:LinkButton>
 
                 </td>
                 <td>
