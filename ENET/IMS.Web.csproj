@@ -170,6 +170,8 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="App_Data\asp0427.sql" />
+    <Content Include="Images\icon-account-change-password.png" />
     <Content Include="Role_Acc\acc_edit_district.aspx" />
     <Content Include="App_Data\IMS.mdf" />
     <Content Include="App_Data\IMS_log.ldf">

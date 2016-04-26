@@ -18,7 +18,8 @@
                 <div class="caption">
                     <h3>Site Engineer</h3>
                     <p>
-                        <asp:Button ID="ButtonE" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonE_Click" /></p>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Role_Eng/eng_dashboard.aspx" Text="Go to Dashboard"></asp:HyperLink>
+                    </p>
                 </div>
             </div>
         </div>
@@ -28,26 +29,30 @@
                 <div class="caption">
                     <h3>Manager</h3>
                     <p>
-                        <asp:Button ID="ButtonM" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonM_Click" /></p>
-                </div>
-            </div>
-        </div>
-       <div class="col-md-3">
-            <div class="thumbnail">
-                <img src="Images/Office-Girl-icon.png" alt="Accountant">
-                <div class="caption">
-                    <h3>Accountant</h3>
-                    <p>
-                        <asp:Button ID="ButtonA" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="ButtonA_Click" /></p>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Role_Man/man_dashboard.aspx" Text="Go to Dashboard"></asp:HyperLink>
+                    </p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="thumbnail">
-                <img src="Images/1461091232_user-admin.png" style="height:256px;" alt="Nobody">
+                <img src="Images/Office-Girl-icon.png" alt="Accountant">
                 <div class="caption">
-                    <h3>Without Login</h3>
-                    <p><a runat="server" href="~/About.aspx" class="btn btn-primary" role="button">Login</a></p>
+                    <h3>Accountant</h3>
+                    <p>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Role_Acc/acc_dashboard.aspx" Text="Go to Dashboard"></asp:HyperLink>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="Images/icon-account-change-password.png" style="height: 256px;" alt="Change Password">
+                <div class="caption">
+                    <h3>Change Password</h3>
+                    <p>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Account/ManagePassword.aspx" Text="Go to Password Change Page"></asp:HyperLink>
+                    </p>
                 </div>
             </div>
         </div>
