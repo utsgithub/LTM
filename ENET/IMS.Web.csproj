@@ -209,6 +209,7 @@
     <Content Include="IMS.xsc">
       <DependentUpon>IMS.xsd</DependentUpon>
     </Content>
+    <Content Include="Web.config" />
     <None Include="IMS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -255,7 +256,6 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
