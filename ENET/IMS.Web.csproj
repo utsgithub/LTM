@@ -173,10 +173,6 @@
     <Content Include="App_Data\asp0427.sql" />
     <Content Include="Images\icon-account-change-password.png" />
     <Content Include="Role_Acc\acc_edit_district.aspx" />
-    <Content Include="App_Data\IMS.mdf" />
-    <Content Include="App_Data\IMS_log.ldf">
-      <DependentUpon>IMS.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\initial_execute.sql" />
     <Content Include="App_Data\sql_queries.sql" />
     <Content Include="App_Data\initial_execute_OLD.sql" />
@@ -213,6 +209,7 @@
     <Content Include="IMS.xsc">
       <DependentUpon>IMS.xsd</DependentUpon>
     </Content>
+    <Content Include="Web.config" />
     <None Include="IMS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -259,7 +256,6 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
