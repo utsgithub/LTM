@@ -13,7 +13,14 @@ namespace IMS
         {
             if (!Page.IsPostBack)
             {
-                btnBack.NavigateUrl = "eng_detail_client?cid=" + Request.QueryString["cid"];
+                if (Request.QueryString["cid"] != null)
+                {
+                    btnBack.NavigateUrl = "eng_detail_client?cid=" + Request.QueryString["cid"];
+                }
+                else
+                {
+                    btnBack.NavigateUrl = "eng_list_intervention";
+                }
             }
         }
     }
