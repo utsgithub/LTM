@@ -194,7 +194,7 @@
     <Content Include="Role_Eng\eng_detail_client.aspx" />
     <Content Include="Role_Acc\acc_dashboard.aspx" />
     <Content Include="Role_Eng\eng_list_client.aspx" />
-    <Content Include="Role_Eng\eng_list_invervention.aspx" />
+    <Content Include="Role_Eng\eng_list_intervention.aspx" />
     <Content Include="Role_Eng\eng_detail_intervention.aspx" />
     <Content Include="Role_Eng\eng_edit_intervention.aspx" />
     <Content Include="Role_Man\man_dashboard.aspx" />
@@ -472,12 +472,12 @@
     <Compile Include="Role_Eng\eng_list_client.aspx.designer.cs">
       <DependentUpon>eng_list_client.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Role_Eng\eng_list_invervention.aspx.cs">
-      <DependentUpon>eng_list_invervention.aspx</DependentUpon>
+    <Compile Include="Role_Eng\eng_list_intervention.aspx.cs">
+      <DependentUpon>eng_list_intervention.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Role_Eng\eng_list_invervention.aspx.designer.cs">
-      <DependentUpon>eng_list_invervention.aspx</DependentUpon>
+    <Compile Include="Role_Eng\eng_list_intervention.aspx.designer.cs">
+      <DependentUpon>eng_list_intervention.aspx</DependentUpon>
     </Compile>
     <Compile Include="Role_Eng\eng_detail_intervention.aspx.cs">
       <DependentUpon>eng_detail_intervention.aspx</DependentUpon>

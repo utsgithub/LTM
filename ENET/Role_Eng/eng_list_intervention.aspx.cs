@@ -9,10 +9,10 @@ namespace IMS
 {
     public partial class eng_list_intervention : System.Web.UI.Page
     {
-        //protected void Page_Load(object sender, EventArgs e)
-        //{
+        protected void Page_Load(object sender, EventArgs e)
+        {
         //    DisplayAllClientsSqlConnection();
-        //}
+        }
 
         //private void DisplayAllClientsSqlConnection()
         //{
