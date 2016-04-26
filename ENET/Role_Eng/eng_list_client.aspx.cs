@@ -8,6 +8,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using IMS.IMSTableAdapters;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace IMS
 {
@@ -15,6 +17,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int UID = int.Parse(User.Identity.GetUserId());
             DisplayAllClientsSqlConnection();
         }
 

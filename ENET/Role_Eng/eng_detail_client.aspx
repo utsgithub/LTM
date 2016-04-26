@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Detailed Client View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_client.aspx.cs" Inherits="IMS.eng_dashboard" %>
+﻿<%@ Page Title="Detailed Client View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_client.aspx.cs" Inherits="IMS.eng_detail_client" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Client Information</h1>
@@ -37,7 +37,7 @@
         </LayoutTemplate>
 
     </asp:ListView>
-    <asp:SqlDataSource ID="rsClientList" runat="server" ConnectionString="<%$ ConnectionStrings:eng_detail_client %>" SelectCommand="SELECT [name], [descriptive], [Districts] FROM [view_client_list] WHERE ([clients_ID] = @clients_ID)">
+    <asp:SqlDataSource ID="rsClientList" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [name], [descriptive], [Districts] FROM [view_client_list] WHERE ([clients_ID] = @clients_ID)">
         <SelectParameters>
             <asp:QueryStringParameter DefaultValue="0" Name="clients_ID" QueryStringField="cid" Type="Int32" />
         </SelectParameters>
@@ -51,7 +51,7 @@
             <asp:BoundField DataField="iDate" HeaderText="Date" DataFormatString="{0:dd/MM/yyyy}" />
         </Columns>
     </asp:GridView>
-    <asp:ListView runat="server" DataSourceID="rsCliInt" >
+    <asp:ListView runat="server" DataSourceID="rsCliInt">
         <EmptyDataTemplate>
             <table runat="server" style="">
                 <tr>
@@ -59,12 +59,12 @@
                 </tr>
             </table>
         </EmptyDataTemplate>
-     
+
         <ItemTemplate>
             <tr style="">
                 <td>
                     <asp:Label ID="interventionTypes_nameLabel" runat="server" Text='' />
-                    
+
                 </td>
                 <td>
                     <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("status") %>' />
@@ -114,7 +114,7 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="rsCliInt" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [interventionTypes_name], [status], [iDate] FROM [view_detail_interventions] WHERE ([clients_ID] = @clients_ID)">
+    <asp:SqlDataSource ID="rsCliInt" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [interventionTypes_name], [status], [iDate] FROM [view_detail_interventions] WHERE ([clients_ID] = @clients_ID)">
         <SelectParameters>
             <asp:QueryStringParameter DefaultValue="0" Name="clients_ID" QueryStringField="cid" Type="Int32" />
         </SelectParameters>
