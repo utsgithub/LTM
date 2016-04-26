@@ -11,7 +11,10 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                btnBack.NavigateUrl = "eng_detail_client?cid=" + Request.QueryString["cid"];
+            }
         }
     }
 }

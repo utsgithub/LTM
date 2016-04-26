@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Detailed Intervention View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_intervention.aspx.cs" Inherits="IMS.eng_dashboard" %>
+﻿<%@ Page Title="Detailed Intervention View" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="eng_detail_intervention.aspx.cs" Inherits="IMS.eng_detail_intervention" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
@@ -24,7 +24,7 @@
                 <EditItemTemplate>
                     <table class="table table-bordered table-striped table-hover">
                         <tr>
-                            <th style="width:150px">comments:</th>
+                            <th style="width: 150px">comments:</th>
                             <td>
                                 <asp:TextBox CssClass="form-control" TextMode="MultiLine" Rows="3" ID="commentsTextBox" runat="server" Text='<%# Bind("comments") %>' />
                             </td>
@@ -47,12 +47,14 @@
                             <td>
                                 <asp:LinkButton ID="UpdateButton" CssClass="btn btn-primary" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" CssClass="btn btn-default" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                                
                             </td>
                         </tr>
                     </table>
 
                 </EditItemTemplate>
             </asp:FormView>
+            <asp:HyperLink runat="server" ID="btnBack" Text="Back" CssClass="btn btn-default"></asp:HyperLink>
             <asp:SqlDataSource ID="rsEngCoreRow" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [comments], [reamaining], [date_recent_visit] FROM [coreInfo] WHERE ([ID] = @ID)">
                 <SelectParameters>
                     <asp:QueryStringParameter DefaultValue="-1" Name="ID" QueryStringField="coreid" Type="Int32" />
