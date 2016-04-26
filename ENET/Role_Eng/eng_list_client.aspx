@@ -12,8 +12,8 @@
                     <td runat="server">
                         <table id="itemPlaceholderContainer" runat="server" border="0" style="" class="table table-bordered table-striped table-hover">
                             <tr runat="server" style="">
-                                <th runat="server">name</th>
-                                <th runat="server">descriptive</th>
+                                <th runat="server">Name</th>
+                                <th runat="server">Descriptive</th>
                                 <th runat="server">Districts</th>
 
                             </tr>
@@ -41,7 +41,7 @@
             </tr>
         </ItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>"
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
         SelectCommand="SELECT [name], [descriptive], [Districts], [clients_ID] FROM [view_client_list] WHERE ([district_id] = @district_id)">
         <SelectParameters>
             <asp:QueryStringParameter DefaultValue="1" Name="district_id" QueryStringField="did" Type="Int32" />
