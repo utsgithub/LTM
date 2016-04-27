@@ -16,13 +16,13 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["ID"] != null)
-            {
-                int id = int.Parse(Request.QueryString["ID"]);
+            //if (Request.QueryString["ID"] != null)
+            //{
+            //    int id = int.Parse(Request.QueryString["ID"]);
 
-                DisplayClientSqlConnection(id);
-                DisplayClientInterventionsSqlConnection(id, 1);
-            }
+            //    DisplayClientSqlConnection(id);
+            //    DisplayClientInterventionsSqlConnection(id, 1);
+            //}
         }
 
         private void DisplayClientSqlConnection(int id)
