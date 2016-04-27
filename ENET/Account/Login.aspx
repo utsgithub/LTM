@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="IMS.Account.Login" Async="true" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+<%--<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>--%>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <h2><%: Title %>.</h2>
@@ -9,6 +9,13 @@
         <div class="col-md-8">
             <section id="loginForm">
                 <div class="form-horizontal">
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <LoggedInTemplate>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Warning! You may don't have the permission. Please go back to the <a runat="server" href="~">Index</a> Page or use the right account to login again.</strong>
+                            </div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
                     <h4>Use a local account to log in.</h4>
                     <hr />
                     <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
@@ -39,13 +46,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-primary" />
+                            <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" CssClass="btn btn-default">Register as a new user</asp:HyperLink>
                         </div>
                     </div>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>
-                </p>
                 <p>
                     <%-- Enable this once you have account confirmation enabled for password reset functionality
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
@@ -55,9 +60,9 @@
         </div>
 
         <div class="col-md-4">
-            <section id="socialLoginForm">
+            <%-- <section id="socialLoginForm">
                 <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
+            </section>--%>
         </div>
     </div>
 </asp:Content>
