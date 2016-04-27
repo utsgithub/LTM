@@ -208,22 +208,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <Content Include="Role_Acc\acc_list_report.aspx" />
-    <Content Include="IMS.xsc">
-      <DependentUpon>IMS.xsd</DependentUpon>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="DataLayer\IMS.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>IMS.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </Content>
-    <None Include="IMS.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IMS.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="IMS.xss">
-      <DependentUpon>IMS.xsd</DependentUpon>
     </Content>
     <Content Include="Role_Acc\Web.config" />
     <Content Include="Role_Eng\Web.config" />
@@ -400,14 +389,6 @@
     </Compile>
     <Compile Include="com_error.aspx.designer.cs">
       <DependentUpon>com_error.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IMS.cs">
-      <DependentUpon>IMS.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="IMS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IMS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Role_Man\man_edit_intervention.aspx.cs">
       <DependentUpon>man_edit_intervention.aspx</DependentUpon>

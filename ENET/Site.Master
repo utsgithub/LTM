@@ -35,9 +35,9 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
+                
             </Scripts>
         </asp:ScriptManager>
-
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -63,8 +63,7 @@
                                 <li><asp:HyperLink ID="acc_link" runat="server" Text="Accountant" NavigateUrl="~/Role_Acc/acc_dashboard"></asp:HyperLink></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="#" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
-                                <%--<li>Hello, <%: Context.User.Identity.GetUserName()  %>!</li>--%>
+                                <li><a runat="server" href="javascript: void(0)" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
                                 <li><asp:HyperLink runat="server" NavigateUrl="~/Account/ManagePassword.aspx" Text="Change Password"></asp:HyperLink></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
