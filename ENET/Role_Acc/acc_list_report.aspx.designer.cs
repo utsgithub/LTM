@@ -10,7 +10,7 @@
 namespace IMS {
     
     
-    public partial class acc_list_users {
+    public partial class acc_list_report {
         
         /// <summary>
         /// SqlDataSource1 control.
