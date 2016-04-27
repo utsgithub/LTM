@@ -11,6 +11,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Todo: 1. get did, 2. complicate insert, 3. data type
             if (!Page.IsPostBack)
             {
                 if (Request.QueryString["cid"] != null)
