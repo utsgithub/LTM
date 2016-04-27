@@ -5,12 +5,9 @@
     <div class="jumbotron">
         <h1>Intervention Monitoring System</h1>
         <p class="lead">
-            Welcome to the Intervention Monitoring System exclusively developed for the wonderful people at ENET Care. Get started
-            now and start some interventions right away.
+            Welcome to the Intervention Monitoring System exclusively developed for the wonderful people at ENET Care. Get started now and start some interventions right away.
         </p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
-
     <div class="row">
         <div class="col-md-3">
             <div class="thumbnail">
