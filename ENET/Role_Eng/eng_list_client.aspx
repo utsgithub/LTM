@@ -15,7 +15,6 @@
                                 <th runat="server">Name</th>
                                 <th runat="server">Descriptive</th>
                                 <th runat="server">Districts</th>
-
                             </tr>
                             <tr runat="server" id="itemPlaceholder">
                             </tr>
@@ -41,10 +40,7 @@
             </tr>
         </ItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" 
-        SelectCommand="SELECT [name], [descriptive], [Districts], [clients_ID] FROM [view_client_list] WHERE ([district_id] = @district_id)">
-        <SelectParameters>
-            <asp:QueryStringParameter DefaultValue="1" Name="district_id" QueryStringField="did" Type="Int32" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>">
+        
     </asp:SqlDataSource>
 </asp:Content>

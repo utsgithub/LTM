@@ -43,14 +43,14 @@
         </SelectParameters>
     </asp:SqlDataSource>
     <h1>Interventions List</h1>
-    <a href="eng_create_intervention" class="btn btn-primary" style="margin: 20px 0px;">Create Intervention</a>
-    <asp:GridView ID="ListAllClientInterventionsGridView" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">
+    <asp:HyperLink runat="server" ID="hlCreateInt" Text="Create Intervention" CssClass="btn btn-primary mbm"></asp:HyperLink>
+  <%--  <asp:GridView ID="ListAllClientInterventionsGridView" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered table-striped table-hover">
         <Columns>
             <asp:BoundField DataField="interventionTypes_name" HeaderText="Intervention Type" />
             <asp:BoundField DataField="status" HeaderText="Status" />
             <asp:BoundField DataField="iDate" HeaderText="Date" DataFormatString="{0:dd/MM/yyyy}" />
         </Columns>
-    </asp:GridView>
+    </asp:GridView>--%>
     <asp:ListView runat="server" DataSourceID="rsCliInt">
         <EmptyDataTemplate>
             <table runat="server" style="">
@@ -71,7 +71,7 @@
                     <asp:Label ID="statusLabel" runat="server" Text='<%# Eval("status") %>' />
                 </td>
                 <td>
-                    <asp:Label ID="iDateLabel" runat="server" Text='<%# Eval("iDate") %>' />
+                    <asp:Label ID="iDateLabel" runat="server" Text='<%# Eval("iDate", "{0:d}") %>' />
                 </td>
             </tr>
         </ItemTemplate>
@@ -88,15 +88,6 @@
                             <tr id="itemPlaceholder" runat="server">
                             </tr>
                         </table>
-                    </td>
-                </tr>
-                <tr runat="server">
-                    <td runat="server" style="">
-                        <asp:DataPager ID="DataPager1" runat="server">
-                            <Fields>
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
-                            </Fields>
-                        </asp:DataPager>
                     </td>
                 </tr>
             </table>

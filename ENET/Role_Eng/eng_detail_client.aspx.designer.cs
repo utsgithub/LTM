@@ -22,13 +22,13 @@ namespace IMS {
         protected global::System.Web.UI.WebControls.SqlDataSource rsClientList;
         
         /// <summary>
-        /// ListAllClientInterventionsGridView control.
+        /// hlCreateInt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ListAllClientInterventionsGridView;
+        protected global::System.Web.UI.WebControls.HyperLink hlCreateInt;
         
         /// <summary>
         /// rsCliInt control.
