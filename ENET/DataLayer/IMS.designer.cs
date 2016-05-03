@@ -36,6 +36,18 @@ namespace IMS.DataLayer
     partial void InsertcoreInfo(coreInfo instance);
     partial void UpdatecoreInfo(coreInfo instance);
     partial void DeletecoreInfo(coreInfo instance);
+    partial void Insertclient(client instance);
+    partial void Updateclient(client instance);
+    partial void Deleteclient(client instance);
+    partial void InsertinterventionType(interventionType instance);
+    partial void UpdateinterventionType(interventionType instance);
+    partial void DeleteinterventionType(interventionType instance);
+    partial void InsertinterventionType1(interventionType1 instance);
+    partial void UpdateinterventionType1(interventionType1 instance);
+    partial void DeleteinterventionType1(interventionType1 instance);
+    partial void Insertdistrict(district instance);
+    partial void Updatedistrict(district instance);
+    partial void Deletedistrict(district instance);
     #endregion
 		
 		public IMSDataContext() : 
@@ -81,6 +93,46 @@ namespace IMS.DataLayer
 			get
 			{
 				return this.GetTable<coreInfo>();
+			}
+		}
+		
+		public System.Data.Linq.Table<view_user> view_users
+		{
+			get
+			{
+				return this.GetTable<view_user>();
+			}
+		}
+		
+		public System.Data.Linq.Table<client> clients
+		{
+			get
+			{
+				return this.GetTable<client>();
+			}
+		}
+		
+		public System.Data.Linq.Table<interventionType> interventionTypes
+		{
+			get
+			{
+				return this.GetTable<interventionType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<interventionType1> interventionType1s
+		{
+			get
+			{
+				return this.GetTable<interventionType1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<district> districts
+		{
+			get
+			{
+				return this.GetTable<district>();
 			}
 		}
 	}
@@ -376,7 +428,7 @@ namespace IMS.DataLayer
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID
 		{
 			get
@@ -592,6 +644,683 @@ namespace IMS.DataLayer
 					this._date_recent_visit = value;
 					this.SendPropertyChanged("date_recent_visit");
 					this.Ondate_recent_visitChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.view_users")]
+	public partial class view_user
+	{
+		
+		private int _Districts_ID;
+		
+		private string _Districts;
+		
+		private int _users_ID;
+		
+		private string _userName;
+		
+		private string _loginName;
+		
+		private System.Nullable<int> _district_ID;
+		
+		private System.Nullable<int> _maxHours;
+		
+		private string _maxCost;
+		
+		private string _userType;
+		
+		private string _AspNetUserID;
+		
+		public view_user()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Districts_ID", DbType="Int NOT NULL")]
+		public int Districts_ID
+		{
+			get
+			{
+				return this._Districts_ID;
+			}
+			set
+			{
+				if ((this._Districts_ID != value))
+				{
+					this._Districts_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Districts", DbType="NVarChar(255)")]
+		public string Districts
+		{
+			get
+			{
+				return this._Districts;
+			}
+			set
+			{
+				if ((this._Districts != value))
+				{
+					this._Districts = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_ID", DbType="Int NOT NULL")]
+		public int users_ID
+		{
+			get
+			{
+				return this._users_ID;
+			}
+			set
+			{
+				if ((this._users_ID != value))
+				{
+					this._users_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(255)")]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this._userName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loginName", DbType="NVarChar(255)")]
+		public string loginName
+		{
+			get
+			{
+				return this._loginName;
+			}
+			set
+			{
+				if ((this._loginName != value))
+				{
+					this._loginName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_district_ID", DbType="Int")]
+		public System.Nullable<int> district_ID
+		{
+			get
+			{
+				return this._district_ID;
+			}
+			set
+			{
+				if ((this._district_ID != value))
+				{
+					this._district_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maxHours", DbType="Int")]
+		public System.Nullable<int> maxHours
+		{
+			get
+			{
+				return this._maxHours;
+			}
+			set
+			{
+				if ((this._maxHours != value))
+				{
+					this._maxHours = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maxCost", DbType="NVarChar(255)")]
+		public string maxCost
+		{
+			get
+			{
+				return this._maxCost;
+			}
+			set
+			{
+				if ((this._maxCost != value))
+				{
+					this._maxCost = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userType", DbType="NVarChar(255)")]
+		public string userType
+		{
+			get
+			{
+				return this._userType;
+			}
+			set
+			{
+				if ((this._userType != value))
+				{
+					this._userType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AspNetUserID", DbType="NVarChar(128)")]
+		public string AspNetUserID
+		{
+			get
+			{
+				return this._AspNetUserID;
+			}
+			set
+			{
+				if ((this._AspNetUserID != value))
+				{
+					this._AspNetUserID = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.clients")]
+	public partial class client : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _name;
+		
+		private string _descriptive;
+		
+		private System.Nullable<int> _district_id;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OndescriptiveChanging(string value);
+    partial void OndescriptiveChanged();
+    partial void Ondistrict_idChanging(System.Nullable<int> value);
+    partial void Ondistrict_idChanged();
+    #endregion
+		
+		public client()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_descriptive", DbType="NVarChar(MAX)")]
+		public string descriptive
+		{
+			get
+			{
+				return this._descriptive;
+			}
+			set
+			{
+				if ((this._descriptive != value))
+				{
+					this.OndescriptiveChanging(value);
+					this.SendPropertyChanging();
+					this._descriptive = value;
+					this.SendPropertyChanged("descriptive");
+					this.OndescriptiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_district_id", DbType="Int")]
+		public System.Nullable<int> district_id
+		{
+			get
+			{
+				return this._district_id;
+			}
+			set
+			{
+				if ((this._district_id != value))
+				{
+					this.Ondistrict_idChanging(value);
+					this.SendPropertyChanging();
+					this._district_id = value;
+					this.SendPropertyChanged("district_id");
+					this.Ondistrict_idChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.interventionTypes")]
+	public partial class interventionType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _name;
+		
+		private string _amount_of_labour;
+		
+		private string _cost_of_materials;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void Onamount_of_labourChanging(string value);
+    partial void Onamount_of_labourChanged();
+    partial void Oncost_of_materialsChanging(string value);
+    partial void Oncost_of_materialsChanged();
+    #endregion
+		
+		public interventionType()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount_of_labour", DbType="NVarChar(255)")]
+		public string amount_of_labour
+		{
+			get
+			{
+				return this._amount_of_labour;
+			}
+			set
+			{
+				if ((this._amount_of_labour != value))
+				{
+					this.Onamount_of_labourChanging(value);
+					this.SendPropertyChanging();
+					this._amount_of_labour = value;
+					this.SendPropertyChanged("amount_of_labour");
+					this.Onamount_of_labourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cost_of_materials", DbType="NVarChar(255)")]
+		public string cost_of_materials
+		{
+			get
+			{
+				return this._cost_of_materials;
+			}
+			set
+			{
+				if ((this._cost_of_materials != value))
+				{
+					this.Oncost_of_materialsChanging(value);
+					this.SendPropertyChanging();
+					this._cost_of_materials = value;
+					this.SendPropertyChanged("cost_of_materials");
+					this.Oncost_of_materialsChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.interventionTypes")]
+	public partial class interventionType1 : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _name;
+		
+		private string _amount_of_labour;
+		
+		private string _cost_of_materials;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void Onamount_of_labourChanging(string value);
+    partial void Onamount_of_labourChanged();
+    partial void Oncost_of_materialsChanging(string value);
+    partial void Oncost_of_materialsChanged();
+    #endregion
+		
+		public interventionType1()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount_of_labour", DbType="NVarChar(255)")]
+		public string amount_of_labour
+		{
+			get
+			{
+				return this._amount_of_labour;
+			}
+			set
+			{
+				if ((this._amount_of_labour != value))
+				{
+					this.Onamount_of_labourChanging(value);
+					this.SendPropertyChanging();
+					this._amount_of_labour = value;
+					this.SendPropertyChanged("amount_of_labour");
+					this.Onamount_of_labourChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cost_of_materials", DbType="NVarChar(255)")]
+		public string cost_of_materials
+		{
+			get
+			{
+				return this._cost_of_materials;
+			}
+			set
+			{
+				if ((this._cost_of_materials != value))
+				{
+					this.Oncost_of_materialsChanging(value);
+					this.SendPropertyChanging();
+					this._cost_of_materials = value;
+					this.SendPropertyChanged("cost_of_materials");
+					this.Oncost_of_materialsChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.districts")]
+	public partial class district : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _Districts;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnDistrictsChanging(string value);
+    partial void OnDistrictsChanged();
+    #endregion
+		
+		public district()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Districts", DbType="NVarChar(255)")]
+		public string Districts
+		{
+			get
+			{
+				return this._Districts;
+			}
+			set
+			{
+				if ((this._Districts != value))
+				{
+					this.OnDistrictsChanging(value);
+					this.SendPropertyChanging();
+					this._Districts = value;
+					this.SendPropertyChanged("Districts");
+					this.OnDistrictsChanged();
 				}
 			}
 		}

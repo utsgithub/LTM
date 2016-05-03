@@ -14,7 +14,7 @@
   </Table>
   <Table Name="dbo.coreInfo" Member="coreInfos">
     <Type Name="coreInfo">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="iType_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="client_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="labour" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -25,6 +25,50 @@
       <Column Name="comments" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="reamaining" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="date_recent_visit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_users" Member="view_users">
+    <Type Name="view_user">
+      <Column Name="Districts_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Districts" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="users_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="loginName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="district_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maxHours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="maxCost" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="userType" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AspNetUserID" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clients" Member="clients">
+    <Type Name="client">
+      <Column Name="ID" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="descriptive" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="district_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.interventionTypes" Member="interventionTypes">
+    <Type Name="interventionType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="amount_of_labour" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cost_of_materials" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.interventionTypes" Member="interventionType1s">
+    <Type Name="interventionType1">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="amount_of_labour" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cost_of_materials" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.districts" Member="districts">
+    <Type Name="district">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Districts" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

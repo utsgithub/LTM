@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+//using IMS.IMSTableAdapters;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -22,6 +23,12 @@ namespace IMS
 
         private void DisplayAllClientsSqlConnection()
         {
+            String UID=User.Identity.GetUserId().ToString();
+            DataLayer.DataOperator obj = new DataLayer.DataOperator();
+            IMS.DataLayer.view_user user = obj.GetUserByID(UID);
+
+            int DID=user.Districts_ID;
+            SqlDataSource1.SelectCommand = "SELECT [name], [descriptive], [Districts], [clients_ID] FROM [view_client_list] WHERE ([district_id] = " + DID + ")";
             /** Previously using manual SQL custom objects
             var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
             var conn = new SqlConnection(connString);
@@ -33,7 +40,7 @@ namespace IMS
             ListAllClientsGridView.DataSource = resultSet;
             ListAllClientsGridView.DataBind(); conn.Close();*/
 
-            
+
             // Typed Data Sets
         }
     }

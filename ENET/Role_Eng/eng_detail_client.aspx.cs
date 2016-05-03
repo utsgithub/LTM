@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+//using IMS.IMSTableAdapters;
 
 namespace IMS
 {
@@ -22,6 +23,7 @@ namespace IMS
             //    DisplayClientSqlConnection(id);
             //    DisplayClientInterventionsSqlConnection(id, 1);
             //}
+            hlCreateInt.NavigateUrl = "eng_create_intervention?cid=" + Request.QueryString["cid"];
         }
 
         private void DisplayClientSqlConnection(int id)
@@ -41,9 +43,9 @@ namespace IMS
                 DistrictLabel.Text = reader.GetString(4); } }
             reader.Close(); conn.Close();*/
 
-          
+
         }
-        
+
         private void DisplayClientInterventionsSqlConnection(int id, int user_id)
         {
             // For the time being User ID 1 will handle the user, this will need to updated to reflect the logged in user's id
@@ -61,7 +63,7 @@ namespace IMS
             ListAllClientInterventionsGridView.DataSource = resultSet;
             ListAllClientInterventionsGridView.DataBind(); conn.Close();*/
 
-         
+
         }
     }
 }
