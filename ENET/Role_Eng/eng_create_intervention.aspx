@@ -19,14 +19,16 @@
         <tr>
             <th>labour required:</th>
             <td>
-                <asp:TextBox runat="server" ID="txtLabour" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox runat="server" ID="txtLabour" TextMode="Number" CssClass="form-control" ControlToValidate="txtLabour"></asp:TextBox>
                 <%--<asp:CustomValidator runat="server" ID="cvNumber" OnServerValidate="cvNumber_ServerValidate" ControlToValidate="txtLabour"></asp:CustomValidator>--%>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Error" ControlToValidate="txtLabour" Type="Integer" MinimumValue="0" MaximumValue="10000000" ForeColor="Red"></asp:RangeValidator>
                 <span id="helpBlock" class="help-block">the default value is given by the intervention type, but it can be overridden by the Site Engineer</span></td>
         </tr>
         <tr>
             <th>cost of materials required:</th>
             <td>
                 <asp:TextBox runat="server" ID="txtCost" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                 <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Error" ControlToValidate="txtCost" Type="Integer" MinimumValue="0" MaximumValue="10000000" ForeColor="Red"></asp:RangeValidator>
                 <span class="help-block">this default value is given by the intervention type, but it can be overridden by the Site Engineer</span></td>
         </tr>
         <tr>
@@ -36,7 +38,8 @@
                 <span class="help-block">
               <%--  <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                 The date that the intervention will be performed (or was performed): this should default to the current date but can be changed</span>--%>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDate" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator></span>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDate" ErrorMessage="Required" ForeColor="Red"></asp:RequiredFieldValidator>
+                </span>
             </td>
         </tr>
         <tr>

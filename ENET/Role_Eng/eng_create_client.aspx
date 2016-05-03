@@ -6,7 +6,7 @@
         <tr>
             <th width="200" nowrap="nowrap">Name:</th>
             <td>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtName"></asp:TextBox>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtName"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
