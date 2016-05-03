@@ -13,16 +13,18 @@ namespace IMS.Role_Eng
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string UID = User.Identity.GetUserId().ToString();
-            DataLayer.DataOperator obj = new DataLayer.DataOperator();
-            IMS.DataLayer.view_user user = obj.GetUserByID(UID);
+            if (!IsPostBack)
+            {
+                string UID = User.Identity.GetUserId().ToString();
+                DataLayer.DataOperator obj = new DataLayer.DataOperator();
+                IMS.DataLayer.view_user user = obj.GetUserByID(UID);
 
-            int DID = user.Districts_ID;
-            ddDistrict.SelectedIndex = DID-1;
-
-            DataLayer.DataOperator dbo = new DataLayer.DataOperator();
-            ddDistrict.DataSource = dbo.GetDistrictList();
-            ddDistrict.DataBind();
+                int DID = user.Districts_ID;
+                DataLayer.DataOperator dbo = new DataLayer.DataOperator();
+                ddDistrict.DataSource = dbo.GetDistrictList();
+                ddDistrict.DataBind();
+                ddDistrict.SelectedValue = DID.ToString();
+            }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

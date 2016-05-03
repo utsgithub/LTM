@@ -42,15 +42,6 @@
                         </table>
                     </td>
                 </tr>
-                <tr runat="server">
-                    <td runat="server" style="">
-                        <asp:DataPager ID="DataPager1" runat="server">
-                            <Fields>
-                                <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
-                            </Fields>
-                        </asp:DataPager>
-                    </td>
-                </tr>
             </table>
         </LayoutTemplate>        
     </asp:ListView>

@@ -30,13 +30,6 @@
                 <tr id="itemPlaceholder" runat="server">
                 </tr>
             </table>
-            <div>
-                <asp:DataPager ID="DataPager1" runat="server">
-                    <Fields>
-                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
-                    </Fields>
-                </asp:DataPager>
-            </div>
             <table runat="server">
                 <tr runat="server">
                     <td runat="server"></td>

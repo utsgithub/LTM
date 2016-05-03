@@ -18,7 +18,8 @@
         <tr>
             <th width="" nowrap="nowrap">District:</th>
             <td>
-                <asp:DropDownList runat="server" ID="ddDistrict" DataTextField="Districts" DataValueField="ID" CssClass="form-control"></asp:DropDownList>
+
+                <asp:DropDownList Enabled="false" runat="server" ID="ddDistrict" DataTextField="Districts" DataValueField="ID" CssClass="form-control"></asp:DropDownList>
             </td>
         </tr>
         <tr>
