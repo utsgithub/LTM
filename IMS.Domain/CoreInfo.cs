@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace IMS.Domain
 {
+    /// <summary>
+    /// This is an object model class for the Core Information table
+    /// with all the corresponding attributes as the class members
+    /// </summary>
     public class CoreInfo
     {
         private int id;

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace IMS.Domain
 {
+    /// <summary>
+    /// This is an object model class for the Intervention table (not used anymore)
+    /// with all the corresponding attributes as the class members
+    /// </summary>
     public class Intervention
     {
         private CoreInfo coreInfo;

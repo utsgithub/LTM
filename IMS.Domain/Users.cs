@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 namespace IMS.Domain
 
 {
+    /// <summary>
+    /// This is an object model class for the Users table
+    /// with all the corresponding attributes as the class members
+    /// </summary>
     public class Users
     {
         private int ID;
@@ -16,7 +20,6 @@ namespace IMS.Domain
         private Districts district;
         private int maxhours;
         private double maxcost;
-        private UserType type;
 
         public Users()
         {

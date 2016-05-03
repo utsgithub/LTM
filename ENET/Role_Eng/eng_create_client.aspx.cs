@@ -11,6 +11,13 @@ namespace IMS.Role_Eng
 {
     public partial class eng_create_client : System.Web.UI.Page
     {
+        /// <summary>
+        /// Before this page is created the user id  from the URL is used to find the user details
+        /// in order to determine the district id for the District drop down list which is set permanently
+        /// based on the User's District location.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,6 +34,12 @@ namespace IMS.Role_Eng
             }
         }
 
+        /// <summary>
+        /// On submission of the form the client is created in the database and the user is
+        /// redirected back to the list of clients page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             DataLayer.DataOperator obj = new DataLayer.DataOperator();
