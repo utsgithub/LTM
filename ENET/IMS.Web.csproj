@@ -176,9 +176,7 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="Images\icon-account-change-password.png" />
     <Content Include="Role_Acc\acc_edit_district.aspx" />
-    <Content Include="App_Data\initial_execute.sql" />
     <Content Include="App_Data\sql_queries.sql" />
-    <Content Include="App_Data\initial_execute_OLD.sql" />
     <Content Include="com_error.aspx" />
     <Content Include="Images\1461091232_user-admin.png" />
     <Content Include="Images\Distributor-report-icon.png" />
@@ -373,6 +371,7 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataLayer\DataOperator.cs" />
+    <Compile Include="DataLayer\Global.cs" />
     <Compile Include="DataLayer\IMS.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
