@@ -84,5 +84,4 @@ namespace IMS.Tests
             Assert.AreEqual(false, user.validateLogin("user1", "12345"));
         }
     }
-
 }
