@@ -40,7 +40,7 @@ namespace IMS
             string getDistict = ddlDistinct.SelectedValue;
             int getUid = int.Parse(Request.QueryString["uid"]);
             DataLayer.DataOperator obj = new DataLayer.DataOperator();
-            obj.UpdateDistinct(getUid, getDistict);
+            obj.UpdateDistrict(getUid, getDistict);
             Response.Redirect("acc_edit_district?did=" + getDistict + "&uid=" + getUid);
         }
     }

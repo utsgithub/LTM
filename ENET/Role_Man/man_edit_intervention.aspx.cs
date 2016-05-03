@@ -9,6 +9,9 @@ namespace IMS
 {
     public partial class man_edit_intervention : System.Web.UI.Page
     {
+        /// <summary>
+        /// This property is created to store the Core Information ID
+        /// </summary>
         protected int CoreID
         {
             get
@@ -24,7 +27,11 @@ namespace IMS
             }
         }
 
-        //  int coreid = int.Parse(Request.QueryString["coreid"]);
+        /// <summary>
+        /// Once page is loaded the core id property is set based on the query string
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             //Todo: Simple Click and change status;
@@ -34,6 +41,14 @@ namespace IMS
             }
         }
 
+        /// <summary>
+        /// Once the approve button is selected the CoreID property is used,
+        /// the Update Status is called from the data layer for the CoreID and
+        /// the Approved message is sent to the database, thereby only the status
+        /// of that core info record is updated. The data is then bind in the grid view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnApprove_Click(object sender, EventArgs e)
         {
             //Todo: Set Coreid global in this page;
@@ -43,6 +58,14 @@ namespace IMS
             DetailsView1.DataBind();
         }
 
+        /// <summary>
+        /// Once the cancel button is selected the CoreID property is used,
+        /// the Update Status is called from the data layer for the CoreID and
+        /// the Cancelled message is sent to the database, thereby only the status
+        /// of that core info record is updated. The data is then bind in the grid view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnCancelled_Click(object sender, EventArgs e)
         {
             DataLayer.DataOperator obj = new DataLayer.DataOperator();
