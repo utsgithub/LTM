@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
 
 namespace IMS
 {
@@ -11,7 +12,13 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        //    DisplayAllClientsSqlConnection();
+
+            String UID = User.Identity.GetUserId().ToString();
+            DataLayer.DataOperator obj = new DataLayer.DataOperator();
+            IMS.DataLayer.view_user user = obj.GetUserByID(UID);
+
+            int DID = user.Districts_ID;
+            SqlDataSource1.SelectCommand = "SELECT [interventionTypes_name], [clients_name], [status], [iDate], [coreInfo_ID] FROM [view_detail_interventions] WHERE ([Districts_ID] = " + DID + ")";
         }
 
         //private void DisplayAllClientsSqlConnection()

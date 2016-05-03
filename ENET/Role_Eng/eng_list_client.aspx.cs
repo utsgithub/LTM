@@ -18,30 +18,12 @@ namespace IMS
         protected void Page_Load(object sender, EventArgs e)
         {
             //int UID = int.Parse(User.Identity.GetUserId());
-            DisplayAllClientsSqlConnection();
-        }
-
-        private void DisplayAllClientsSqlConnection()
-        {
-            String UID=User.Identity.GetUserId().ToString();
+            String UID = User.Identity.GetUserId().ToString();
             DataLayer.DataOperator obj = new DataLayer.DataOperator();
             IMS.DataLayer.view_user user = obj.GetUserByID(UID);
 
-            int DID=user.Districts_ID;
+            int DID = user.Districts_ID;
             SqlDataSource1.SelectCommand = "SELECT [name], [descriptive], [Districts], [clients_ID] FROM [view_client_list] WHERE ([district_id] = " + DID + ")";
-            /** Previously using manual SQL custom objects
-            var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
-            var conn = new SqlConnection(connString);
-            //var selectCommand = new SqlCommand("SELECT c.ID, c.name, c.descriptive, d.Districts FROM clients C INNER JOIN districts d on C.district_id = d.ID", conn);
-            //var selectCommand = new SqlCommand("SELECT * FROM eng_list_client", conn);
-            var selectCommand = new SqlCommand("SELECT * FROM view_client_list", conn);
-            var adapter = new SqlDataAdapter(selectCommand);
-            var resultSet = new DataSet(); adapter.Fill(resultSet);
-            ListAllClientsGridView.DataSource = resultSet;
-            ListAllClientsGridView.DataBind(); conn.Close();*/
-
-
-            // Typed Data Sets
         }
     }
 }
