@@ -7,7 +7,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using IMS.IMSTableAdapters;
 
 namespace IMS
 {
@@ -15,7 +14,7 @@ namespace IMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String sql = "SELECT userName AS 'engineer', SUM(labour) AS 'hours', SUM(cost) AS 'cost' FROM view_detail_interventions WHERE status = 'Completed' GROUP BY userNameORDER BY userName ASC";
+            /*String sql = "SELECT userName AS 'engineer', SUM(labour) AS 'hours', SUM(cost) AS 'cost' FROM view_detail_interventions WHERE status = 'Completed' GROUP BY userName ORDER BY userName ASC";
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             using (conn)
             {
@@ -23,7 +22,7 @@ namespace IMS
                 conn.Open();
                 SqlDataReader reader = command.ExecuteReader(CommandBehavior.CloseConnection);
                 conn.Close();
-            }
+            }*/
 
             //ReportGridView.DataSource = null;
             //ReportGridView.DataBind();
