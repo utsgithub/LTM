@@ -1,16 +1,23 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IMS.Domain;
+using IMS.DataLayer;
 
 namespace IMS.Tests
 {
     [TestClass]
     public class UnitTests
     {
-
+        /// <summary>
+        /// Object variables
+        /// </summary>
         private Intervention inter;
         private Users user;
+        private DataOperator data_operator;
 
+        /// <summary>
+        /// Initializing the object variables
+        /// </summary>
         [TestInitialize]
         public void Setup()
         {
@@ -18,6 +25,8 @@ namespace IMS.Tests
             user = new Users();
             user.setPassword("123456");
             user.setLoginname("user1");
+
+            data_operator = new DataLayer.DataOperator();
         }
 
         // test state change and its validation.
@@ -56,7 +65,6 @@ namespace IMS.Tests
         {
             
             Assert.AreEqual(true, user.changePassword("123456", "654321"));
-            
         }
 
         [TestMethod]
