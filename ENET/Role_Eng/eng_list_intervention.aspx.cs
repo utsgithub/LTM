@@ -10,6 +10,14 @@ namespace IMS
 {
     public partial class eng_list_intervention : System.Web.UI.Page
     {
+        /// <summary>
+        /// Before the list of interventions page is loaded the district id 
+        /// of the user is obtained and the sql data source's select command is
+        /// created to include the district ID for the current user, in order to
+        /// display all the interventions that relate to that district.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,26 +28,5 @@ namespace IMS
             int DID = user.Districts_ID;
             SqlDataSource1.SelectCommand = "SELECT [interventionTypes_name], [clients_name], [status], [iDate], [coreInfo_ID] FROM [view_detail_interventions] WHERE ([Districts_ID] = " + DID + ")";
         }
-
-        //private void DisplayAllClientsSqlConnection()
-        //{
-        //    /** Previously using manual SQL custom objects
-        //    var connString = ConfigurationManager.ConnectionStrings["IMSserver"].ConnectionString;
-        //    var conn = new SqlConnection(connString);
-        //    //var selectCommand = new SqlCommand("SELECT c.ID, c.name, c.descriptive, d.Districts FROM clients C INNER JOIN districts d on C.district_id = d.ID", conn);
-        //    //var selectCommand = new SqlCommand("SELECT * FROM eng_list_client", conn);
-        //    var selectCommand = new SqlCommand("SELECT * FROM view_client_list", conn);
-        //    var adapter = new SqlDataAdapter(selectCommand);
-        //    var resultSet = new DataSet(); adapter.Fill(resultSet);
-        //    ListAllClientsGridView.DataSource = resultSet;
-        //    ListAllClientsGridView.DataBind(); conn.Close();*/
-
-
-        //    // Typed Data Sets
-        //    //var clients_table = new ViewClientsTableAdapter().GetData();
-
-        //    //ListAllClientsGridView.DataSource = clients_table;
-        //    //ListAllClientsGridView.DataBind();
-        //}
     }
 }

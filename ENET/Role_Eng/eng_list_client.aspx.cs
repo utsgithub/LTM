@@ -15,6 +15,13 @@ namespace IMS
 {
     public partial class eng_list_client : System.Web.UI.Page
     {
+        /// <summary>
+        /// For this page, before the page is loaded the User ID is obtained to gather the 
+        /// user ID from which the district ID is gathered in order to show a list of clients
+        /// that belong to that specific district.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             //int UID = int.Parse(User.Identity.GetUserId());

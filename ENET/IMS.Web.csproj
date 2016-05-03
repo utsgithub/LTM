@@ -172,7 +172,6 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="App_Data\0503.sql" />
-    <Content Include="App_Data\0504-1.sql" />
     <Content Include="App_Data\0504.sql" />
     <Content Include="App_Data\2025.sql" />
     <Content Include="App_Data\asp0427.sql" />
